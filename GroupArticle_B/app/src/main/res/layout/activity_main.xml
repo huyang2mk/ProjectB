@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lanou.yhz.article.grouparticle_b.MainActivity">
+    <FrameLayout
+        android:id="@+id/fl_replace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11" >
+    </FrameLayout>
+
+<RadioGroup
+    android:orientation="horizontal"
+
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <RadioButton
+        android:id="@+id/rb_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_tabbar_home"
+        android:checked="true"
+        android:textColor="@drawable/main_color"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textSize="11sp"
+        android:text="首页"
+
+
+        android:button="@null" />
+
+    <RadioButton
+        android:id="@+id/rb_find"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="频道"
+        android:textColor="@drawable/main_color"
+        android:drawableTop="@drawable/ic_tabbar_find"
+        android:textSize="11sp"
+        android:button="@null" />
+
+    <RadioButton
+        android:id="@+id/rb_take"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:text="发现"
+        android:gravity="center"
+        android:textColor="@drawable/main_color"
+        android:drawableTop="@drawable/ic_tabbar_take"
+        android:textSize="11sp"
+        android:button="@null" />
+
+    <RadioButton
+        android:id="@+id/rb_mine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:text="我的"
+        android:gravity="center"
+        android:textColor="@drawable/main_color"
+        android:drawableTop="@drawable/ic_tabbar_mine"
+        android:textSize="11sp"
+        android:button="@null" />
+</RadioGroup>
+</LinearLayout>
