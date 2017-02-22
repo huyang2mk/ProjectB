@@ -53,7 +53,7 @@ private TakeFragmentAdapter adapter;
         OkHttpManger okHttpmanger = OkHttpManger.getInstance();
         okHttpmanger.startHeader(postUrl, maps, new OnNetResultListener() {
             @Override
-            public void onSUccessListener(String successStr) {
+            public void onSuccessListener(String successStr) {
                 Gson gson = new Gson();
                 data = gson.fromJson(successStr,TakeBean.class);
                 adapter.setData(data);

@@ -56,7 +56,7 @@ public class SubscriptionHomeFragment extends BaseFragment {
         OkHttpManger okHttpManger = OkHttpManger.getInstance();
         okHttpManger.startHeader(postUrl, maps, new OnNetResultListener() {
             @Override
-            public void onSUccessListener(String successStr) {
+            public void onSuccessListener(String successStr) {
 
                 Gson gson = new Gson();
                 data = gson.fromJson(successStr,SubscriptionBean.class);

@@ -1,7 +1,15 @@
-package com.lanou.yhz.article.grouparticle_b.ok;
+package com.lanou.yhz.article.grouparticle_b.home.newest;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+import com.lanou.yhz.article.grouparticle_b.bean.homebean.newestbean.NewTitleBean;
+
+import java.util.List;
 
 /**
- * Created by dllo on 17/2/20.
+ * Created by dllo on 17/2/21.
  * //                            _ooOoo_
  * //                           o8888888o
  * //                           88" . "88
@@ -34,12 +42,31 @@ package com.lanou.yhz.article.grouparticle_b.ok;
  * //                  不见满街漂亮妹，哪个归得程序员？
  */
 
-// 网络请求结果接口
+public class NewestHomeAdapter extends FragmentPagerAdapter {
+    private List<NewTitleBean.DataBean.CategoryBean>data;
+    public NewestHomeAdapter(FragmentManager fm) {
+        super(fm);
+    }
 
-public interface OnNetResultListener {
+    public void setData(List<NewTitleBean.DataBean.CategoryBean> data) {
+        this.data = data;
+        notifyDataSetChanged();
+    }
 
-    void onSuccessListener(String successStr);
+    @Override
+    public Fragment getItem(int position) {
+        int channelID = data.get(position).getId();
+        return ViewPgerNewestHomeFragment.getSendGirlfriendHome(channelID);
 
-    void onFailureListener(String errMsg);
+    }
 
+    @Override
+    public int getCount() {
+        return data!=null? data.size():0;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return data.get(position).getName();
+    }
 }

@@ -1,7 +1,13 @@
-package com.lanou.yhz.article.grouparticle_b.ok;
+package com.lanou.yhz.article.grouparticle_b.home.newest;
+
+import android.os.Bundle;
+import android.view.View;
+
+import com.lanou.yhz.article.grouparticle_b.R;
+import com.lanou.yhz.article.grouparticle_b.base.BaseFragment;
 
 /**
- * Created by dllo on 17/2/20.
+ * Created by dllo on 17/2/21.
  * //                            _ooOoo_
  * //                           o8888888o
  * //                           88" . "88
@@ -34,12 +40,32 @@ package com.lanou.yhz.article.grouparticle_b.ok;
  * //                  不见满街漂亮妹，哪个归得程序员？
  */
 
-// 网络请求结果接口
+public class ViewPgerNewestHomeFragment extends BaseFragment {
 
-public interface OnNetResultListener {
+    public static ViewPgerNewestHomeFragment getSendGirlfriendHome(int channelsId) {
 
-    void onSuccessListener(String successStr);
+        ViewPgerNewestHomeFragment fragment = new ViewPgerNewestHomeFragment();
+        // 传递数据
+        Bundle bundle = new Bundle();
+        bundle.putInt("channelsId", channelsId);
+        bundle.putBoolean("isNeedLoad", false);
+        fragment.setArguments(bundle);
 
-    void onFailureListener(String errMsg);
+        return fragment;
 
+    }
+    @Override
+    public int setLayout() {
+        return R.layout.fragment_home_newest_viewpager;
+    }
+
+    @Override
+    public void initView(View view) {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
 }

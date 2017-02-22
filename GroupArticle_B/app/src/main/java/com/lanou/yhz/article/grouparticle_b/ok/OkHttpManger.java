@@ -223,7 +223,7 @@ public class OkHttpManger {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        listener.onSUccessListener(str);
+                        listener.onSuccessListener(str);
                     }
                 });
             }
