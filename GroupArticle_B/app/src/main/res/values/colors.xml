@@ -6,4 +6,5 @@
     <color name="colorSkyBlue">#3bb0f5</color>
     <color name="colorGray">#9e9e9e</color>
     <color name="colorAshen">#e9e4e4</color>
+    <color name="colorTransparent">#ffffff</color>
 </resources>

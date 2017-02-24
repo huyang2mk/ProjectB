@@ -8,11 +8,12 @@ import java.util.List;
 
 /**
  * Created by dllo on 17/2/20.
+ * home中的Tablayout
  */
 
 public class HomeFragmentViewPage extends FragmentPagerAdapter {
-private List<Fragment> dataBean;
-    private String[] title = {"最新","精选","订阅"};
+    private List<Fragment> dataBean;
+    private String[] title = {"最新", "精选", "订阅"};
 
     public HomeFragmentViewPage(FragmentManager fm) {
         super(fm);
@@ -35,6 +36,6 @@ private List<Fragment> dataBean;
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return  title[position];
+        return title[position];
     }
 }

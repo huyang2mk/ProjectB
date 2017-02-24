@@ -26,6 +26,7 @@ public class SubscriptionHomeFragment extends BaseFragment {
     private ListView listView;
     private SubscriptionBean data;
     private ListSubscriptionAdapter adapter;
+
     @Override
     public int setLayout() {
         return R.layout.fragment_home_subscription;
@@ -50,7 +51,6 @@ public class SubscriptionHomeFragment extends BaseFragment {
         });
 
 
-
         postRequest();
 
     }
@@ -68,7 +68,7 @@ public class SubscriptionHomeFragment extends BaseFragment {
             public void onSuccessListener(String successStr) {
 
                 Gson gson = new Gson();
-                data = gson.fromJson(successStr,SubscriptionBean.class);
+                data = gson.fromJson(successStr, SubscriptionBean.class);
                 adapter.setData(data);
                 bindAdapter();
                 Log.d("SubscriptionHomeFragmen", successStr);
@@ -81,7 +81,7 @@ public class SubscriptionHomeFragment extends BaseFragment {
         });
     }
 
-    public void bindAdapter(){
+    public void bindAdapter() {
         getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {

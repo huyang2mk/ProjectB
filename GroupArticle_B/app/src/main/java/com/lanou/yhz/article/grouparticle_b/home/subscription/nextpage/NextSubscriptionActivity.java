@@ -20,7 +20,7 @@ import java.util.List;
 * */
 
 public class NextSubscriptionActivity extends BaseActivity {
-private ViewPager viewPager;
+    private ViewPager viewPager;
     private ImageView iv_subscription_next_topbar_back;
     private List<Fragment> data;
     private TabLayout tabLayout;
@@ -42,7 +42,7 @@ private ViewPager viewPager;
         tabLayout = (TabLayout) findViewById(R.id.tab_home_subscription_next);
         viewPager = (ViewPager) findViewById(R.id.vp_home_subsciption_next);
         //添加tab颜色
-        tabLayout.setTabTextColors(Color.BLACK,getResources().getColor(R.color.colorSkyBlue));
+        tabLayout.setTabTextColors(Color.BLACK, getResources().getColor(R.color.colorSkyBlue));
         // 将tabLayout的下划线颜色设置成蓝色
         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorSkyBlue));
 
@@ -54,7 +54,7 @@ private ViewPager viewPager;
 
     @Override
     protected void initData() {
-        HomeFragmentViewPage viewPage = new HomeFragmentViewPage(getSupportFragmentManager(),data);
+        HomeFragmentViewPage viewPage = new HomeFragmentViewPage(getSupportFragmentManager(), data);
         viewPager.setAdapter(viewPage);
         tabLayout.setupWithViewPager(viewPager);
     }

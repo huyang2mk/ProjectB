@@ -22,6 +22,7 @@ public class ThreePageSubHottestFragment extends BaseFragment {
     private ListView listView;
     private ThreePageSubHottestFragmentAdapter adapter;
     private SubHottestAdapterBean data;
+
     @Override
     public int setLayout() {
         return R.layout.fragment_subhottest_threepage;
@@ -55,7 +56,7 @@ public class ThreePageSubHottestFragment extends BaseFragment {
             @Override
             public void onSuccessListener(String successStr) {
                 Gson gson = new Gson();
-                data = gson.fromJson(successStr,SubHottestAdapterBean.class);
+                data = gson.fromJson(successStr, SubHottestAdapterBean.class);
                 adapter.setData(data.getData().getResults());
                 listView.setAdapter(adapter);
                 Log.d("SubscriptionHomeFragmen", successStr);
