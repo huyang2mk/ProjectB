@@ -14,6 +14,7 @@ import com.lanou.yhz.article.grouparticle_b.bean.takebean.TakeBean;
 
 /**
  * Created by dllo on 17/2/22.
+ * 频道- ListView适配器
  */
 
 public class TakeFragmentAdapter extends BaseAdapter {
@@ -57,6 +58,10 @@ public class TakeFragmentAdapter extends BaseAdapter {
            holder = (MyViewHolder) convertView.getTag();
         }
         holder.textViewTitle.setText(data.getData().getCategory().get(position).getName());
+        GridViewTakeAdapter gridViewTakeAdapter = new GridViewTakeAdapter(context);
+        holder.gridView.setAdapter(gridViewTakeAdapter);
+        gridViewTakeAdapter.setDatas(data.getData().getCategory().get(position).getLeafCategory());
+
 
         return convertView;
     }

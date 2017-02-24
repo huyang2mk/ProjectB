@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/iv_subscription_threepage_image"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGray"
+    android:scaleType="fitXY"
+    />
+    <TextView
+        android:id="@+id/tv_subscription_threepage_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="行尸走肉杠上老友记?是有老梆子们才懂"
+        android:textSize="14sp"
+        android:gravity="center"
+        />
+
+</LinearLayout>
