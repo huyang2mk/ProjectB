@@ -20,16 +20,4 @@
     </android.support.v4.view.ViewPager>
 
 
-    <TableLayout
-        android:id="@+id/fragment_home_new_TabLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-    </TableLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/fragment_home_new_ViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
 </LinearLayout>

@@ -49,8 +49,8 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void initData() {
-        HomeFragmentViewPage viewPage = new HomeFragmentViewPage(getChildFragmentManager(),data);
-        viewPager.setAdapter(viewPage);
+        HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(getChildFragmentManager(),data);
+        viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }
 }

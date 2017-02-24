@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--样式的名字就是自定义组建的名字-->
+    <declare-styleable name="BitmapShaderImageView">
+
+        <!--此处可以添加任何行-->
+        <!--意义是自定义属性-->
+        <!--name后面定义属性名字-->
+        <!--format后面可以定义属性类型-->
+        <!--注意不要大写-->
+        <!--format属性则代表的是该条属性的格式它有以下几种: reference:参考某一资源ID-->
+        <!--color:颜色值-->
+        <!--boolean:布尔值-->
+        <!--dimension:尺寸值-->
+        <!--float:浮点值-->
+        <!--integer:整型值-->
+        <!--string:字符串-->
+        <!--fraction:百分数-->
+        <!--enum:枚举值-->
+        <!--flag:位或运算 需要注意的是,一条属性可以指定几种格式,使用 | 连接-->
+        <attr name="type" format="boolean" />
+        <attr name="borderRadius" format="boolean" />
+
+    </declare-styleable>
+
+
+    <!--自定义属性 属性对象叫MyView-->
+    <declare-styleable name="MyView">
+        <!--name指的是属性名称 format指的是属性类型-->
+        <attr name="text" format="string" />
+        <attr name="textSize" format="dimension"/>
+
+
+    </declare-styleable>
+
+
+
+
+
+    <declare-styleable name="MyRelativeLayout">
+        <!--name指的是属性名称 format指的是属性类型-->
+        <attr name="titleText" format="string" />
+        <attr name="descriptionText" format="string"/>
+        <!--背景图片设置的引用类型 即找其他文件下的图片对象-->
+       <attr name="background" format="reference"/>
+
+    </declare-styleable>
+
+</resources>

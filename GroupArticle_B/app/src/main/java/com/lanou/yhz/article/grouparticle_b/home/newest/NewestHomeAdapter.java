@@ -41,28 +41,29 @@ import java.util.List;
  * //                  别人笑我忒疯癫，我笑自己命太贱；
  * //                  不见满街漂亮妹，哪个归得程序员？
  */
-
+//最新页面的总fragment的适配器
 public class NewestHomeAdapter extends FragmentPagerAdapter {
-    private List<NewTitleBean.DataBean.CategoryBean>data;
+    private List<NewTitleBean.DataBean.CategoryBean> data;
+    private List<Fragment> fragments;
+
     public NewestHomeAdapter(FragmentManager fm) {
         super(fm);
     }
 
-    public void setData(List<NewTitleBean.DataBean.CategoryBean> data) {
+    public void setData(List<NewTitleBean.DataBean.CategoryBean> data, List<Fragment> fragments) {
         this.data = data;
+        this.fragments = fragments;
         notifyDataSetChanged();
     }
 
     @Override
     public Fragment getItem(int position) {
-        int channelID = data.get(position).getId();
-        return ViewPgerNewestHomeFragment.getSendGirlfriendHome(channelID);
-
+        return fragments.get(position);
     }
 
     @Override
     public int getCount() {
-        return data!=null? data.size():0;
+        return data != null ? data.size() : 0;
     }
 
     @Override

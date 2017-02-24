@@ -10,15 +10,15 @@ import java.util.List;
  * Created by dllo on 17/2/20.
  */
 
-public class HomeFragmentViewPage extends FragmentPagerAdapter {
+public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
 private List<Fragment> dataBean;
     private String[] title = {"最新","精选","订阅"};
 
-    public HomeFragmentViewPage(FragmentManager fm) {
+    public HomeFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
-    public HomeFragmentViewPage(FragmentManager fm, List<Fragment> dataBean) {
+    public HomeFragmentPagerAdapter(FragmentManager fm, List<Fragment> dataBean) {
         super(fm);
         this.dataBean = dataBean;
     }

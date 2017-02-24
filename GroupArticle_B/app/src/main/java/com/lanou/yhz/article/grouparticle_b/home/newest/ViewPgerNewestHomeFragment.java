@@ -1,10 +1,20 @@
 package com.lanou.yhz.article.grouparticle_b.home.newest;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
+import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.base.BaseFragment;
+import com.lanou.yhz.article.grouparticle_b.bean.homebean.newestbean.NewestViewPgerBean;
+import com.lanou.yhz.article.grouparticle_b.ok.Constant;
+import com.lanou.yhz.article.grouparticle_b.ok.OkHttpManger;
+import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
+
+import java.util.Map;
 
 /**
  * Created by dllo on 17/2/21.
@@ -40,32 +50,74 @@ import com.lanou.yhz.article.grouparticle_b.base.BaseFragment;
  * //                  不见满街漂亮妹，哪个归得程序员？
  */
 
+// 最新页面,每个Tablayout的item页
+
 public class ViewPgerNewestHomeFragment extends BaseFragment {
 
-    public static ViewPgerNewestHomeFragment getSendGirlfriendHome(int channelsId) {
+    //private TextView showTv;
+    private ListView listView;
+    private ViewPgerNewestHomeAdapter adapter;
 
+
+    // 复用机制
+    public static ViewPgerNewestHomeFragment newInstance(int id, String token) {
+
+        Bundle args = new Bundle();
+        args.putInt("id", id);
+        args.putString("token", token);
         ViewPgerNewestHomeFragment fragment = new ViewPgerNewestHomeFragment();
-        // 传递数据
-        Bundle bundle = new Bundle();
-        bundle.putInt("channelsId", channelsId);
-        bundle.putBoolean("isNeedLoad", false);
-        fragment.setArguments(bundle);
-
+        fragment.setArguments(args);
         return fragment;
-
     }
+
     @Override
     public int setLayout() {
-        return R.layout.fragment_home_newest_viewpager;
+        return R.layout.fragment_home_newest_viewpager_listview;
     }
 
     @Override
     public void initView(View view) {
+        //showTv = (TextView) view.findViewById(R.id.ttttt_v);
+        listView = (ListView) view.findViewById(R.id.fragment_home_newest_viewpager_listview);
 
     }
 
     @Override
     public void initData() {
+        Bundle bundle = getArguments();
+        int id = bundle.getInt("id");
+        String token = bundle.getString("token");
 
+        //showTv.setText(id + "-----" + token);
+
+
+        String key = "token";
+
+        Constant.NEW_MAP_VIEWPAGER.put(key, token);
+
+        Log.d("ViewPgerNewestHomeFragm", token);
+
+        // 网络请求
+        OkHttpManger.getInstance().startHeader(Constant.NEW_VIEWPAGER, Constant.NEW_MAP_VIEWPAGER, new OnNetResultListener() {
+            @Override
+            public void onSuccessListener(String successStr) {
+
+                Gson gson = new Gson();
+                NewestViewPgerBean bean = gson.fromJson(successStr, NewestViewPgerBean.class);
+
+                //Log.d("ViewPgerNewestHomeFragm", "bean.getData().getCurrentPage():" + bean.getData().getResults());
+                adapter = new ViewPgerNewestHomeAdapter(context);
+                listView.setAdapter(adapter);
+                adapter.setData(bean.getData().getResults());
+            }
+
+            @Override
+            public void onFailureListener(String errMsg) {
+
+            }
+        });
     }
+
+
+
 }
