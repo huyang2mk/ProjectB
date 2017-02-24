@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-
     android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
@@ -14,10 +13,10 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_margin="10dp"
                 android:id="@+id/newest_viewpager_listview_item_ImageView"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
+                android:layout_margin="10dp"
                 android:src="@mipmap/ic_launcher" />
 
 
@@ -32,22 +31,22 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
-                android:textColor="#FFFFFF"
                 android:id="@+id/introduce"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_above="@+id/newest_viewpager_listview_item_head"
                 android:layout_marginLeft="20dp"
                 android:singleLine="true"
-                android:text="测试文字测试文字测试文字测试文字测试文字" />
+                android:text="测试文字测试文字测试文字测试文字测试文字"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/new_viewpager_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/newest_viewpager_listview_item_ImageView"
-                android:layout_marginLeft="10dp"
                 android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/newest_viewpager_listview_item_head"
                 android:gravity="center_horizontal"
                 android:text="小李君" />

@@ -4,6 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical"
     tools:context="com.lanou.yhz.article.grouparticle_b.MainActivity">
     <FrameLayout
@@ -35,7 +36,7 @@
         android:button="@null" />
 
     <RadioButton
-        android:id="@+id/rb_find"
+        android:id="@+id/rb_take"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -43,12 +44,12 @@
         android:layout_marginTop="4dp"
         android:text="频道"
         android:textColor="@drawable/main_color"
-        android:drawableTop="@drawable/ic_tabbar_find"
+        android:drawableTop="@drawable/ic_tabbar_take"
         android:textSize="11sp"
         android:button="@null" />
 
     <RadioButton
-        android:id="@+id/rb_take"
+        android:id="@+id/rb_find"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -56,7 +57,7 @@
         android:text="发现"
         android:gravity="center"
         android:textColor="@drawable/main_color"
-        android:drawableTop="@drawable/ic_tabbar_take"
+        android:drawableTop="@drawable/ic_tabbar_find"
         android:textSize="11sp"
         android:button="@null" />
 

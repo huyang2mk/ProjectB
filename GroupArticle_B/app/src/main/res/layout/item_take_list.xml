@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-<ImageView
-    android:id="@+id/iv_take_title"
-    android:layout_width="25dp"
-    android:layout_height="25dp"
-    android:scaleType="fitXY"
-    android:background="@mipmap/ic_launcher"/>
+        android:layout_height="35dp">
+
+        <ImageView
+            android:id="@+id/iv_take_title"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/ic_launcher"
+            android:scaleType="fitXY" />
+
         <TextView
-            android:layout_toRightOf="@id/iv_take_title"
-            android:layout_marginTop="5dp"
             android:id="@+id/tv_take_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:text="娱乐"/>
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/iv_take_title"
+            android:text="娱乐"
+            android:textSize="15dp" />
+
         <ImageView
-            android:layout_alignParentRight="true"
             android:id="@+id/iv_btn_enter_take"
-            android:layout_margin="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
             android:background="@mipmap/btn_enter"
 
 
@@ -35,7 +40,10 @@
     <GridView
         android:id="@+id/gv_take"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="3"></GridView>
+        android:layout_height="80dp"
+        android:horizontalSpacing="-10dp"
+        android:numColumns="3"
+
+        ></GridView>
 
 </LinearLayout>

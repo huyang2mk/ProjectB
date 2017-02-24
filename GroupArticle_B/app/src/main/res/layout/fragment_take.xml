@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context="com.lanou.yhz.article.grouparticle_b.take.TakeFragment">
 
     <TextView
-        android:layout_weight="1"
+
         android:id="@+id/tv_head_take"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:text="频道"
         android:layout_marginLeft="10dp"
         android:gravity="center_vertical"
         android:textSize="20sp"/>
     <ListView
-        android:layout_weight="10"
+
         android:id="@+id/lv_take"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>
