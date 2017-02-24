@@ -4,6 +4,8 @@ import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.base.BaseActivity;
@@ -19,6 +21,7 @@ import java.util.List;
 
 public class NextSubscriptionActivity extends BaseActivity {
 private ViewPager viewPager;
+    private ImageView iv_subscription_next_topbar_back;
     private List<Fragment> data;
     private TabLayout tabLayout;
 
@@ -29,6 +32,13 @@ private ViewPager viewPager;
 
     @Override
     protected void initView() {
+        iv_subscription_next_topbar_back = (ImageView) findViewById(R.id.iv_subscription_next_topbar_back);
+        iv_subscription_next_topbar_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         tabLayout = (TabLayout) findViewById(R.id.tab_home_subscription_next);
         viewPager = (ViewPager) findViewById(R.id.vp_home_subsciption_next);
         //添加tab颜色

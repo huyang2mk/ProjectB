@@ -58,7 +58,7 @@ public class ThreePageSubHottestFragmentAdapter extends BaseAdapter {
         }
         GlideManger glideManger = GlideManger.getsInstance();
         glideManger.loadImageView(context,data.get(position).getCover(),holder.imageView);
-        holder.textView.setText(data.get(position).getAuthor().getNickName());
+        holder.textView.setText(data.get(position).getTitle());
         return convertView;
     }
     class MyViewHolder{

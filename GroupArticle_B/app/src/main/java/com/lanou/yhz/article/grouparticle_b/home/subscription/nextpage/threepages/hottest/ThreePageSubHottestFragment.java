@@ -12,7 +12,6 @@ import com.lanou.yhz.article.grouparticle_b.ok.OkHttpManger;
 import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,8 +20,8 @@ import java.util.Map;
 
 public class ThreePageSubHottestFragment extends BaseFragment {
     private ListView listView;
-//    private ThreePageSubHottestFragmentAdapter adapter;
-    private List<SubHottestAdapterBean.DataBean.ResultsBean> data;
+    private ThreePageSubHottestFragmentAdapter adapter;
+    private SubHottestAdapterBean data;
     @Override
     public int setLayout() {
         return R.layout.fragment_subhottest_threepage;
@@ -37,7 +36,7 @@ public class ThreePageSubHottestFragment extends BaseFragment {
     @Override
     public void initData() {
 
-//        adapter = new ThreePageSubHottestFragmentAdapter(context);
+        adapter = new ThreePageSubHottestFragmentAdapter(context);
         postRequest();
     }
 
@@ -56,9 +55,9 @@ public class ThreePageSubHottestFragment extends BaseFragment {
             @Override
             public void onSuccessListener(String successStr) {
                 Gson gson = new Gson();
-//                data = gson.fromJson(successStr,List<SubHottestAdapterBean.DataBean.ResultsBean>);
-//                adapter.setData(data);
-
+                data = gson.fromJson(successStr,SubHottestAdapterBean.class);
+                adapter.setData(data.getData().getResults());
+                listView.setAdapter(adapter);
                 Log.d("SubscriptionHomeFragmen", successStr);
             }
 
