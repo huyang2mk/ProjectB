@@ -13,7 +13,7 @@ import java.util.List;
 
 public class NextSubscriptionActivityViewPager extends FragmentPagerAdapter {
     private List<Fragment> dateBean;
-    private String[] title = {"最新","最热"};
+    private String[] title = {"最新", "最热"};
 
     public NextSubscriptionActivityViewPager(FragmentManager fm, List<Fragment> dateBean) {
         super(fm);

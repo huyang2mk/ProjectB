@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-</LinearLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/newest_viewpager_listview_item_ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_launcher" />
+
+
+            <com.lanou.yhz.article.grouparticle_b.home.newest.headportrait.RoundHead
+                android:id="@+id/newest_viewpager_listview_item_head"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/newest_viewpager_listview_item_ImageView"
+
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/introduce"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_above="@+id/newest_viewpager_listview_item_head"
+                android:layout_marginLeft="20dp"
+                android:singleLine="true"
+                android:text="测试文字测试文字测试文字测试文字测试文字"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/new_viewpager_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newest_viewpager_listview_item_ImageView"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/newest_viewpager_listview_item_head"
+                android:gravity="center_horizontal"
+                android:text="小李君" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/newest_viewpager_listview_item_ImageView"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/btn_nav_share" />
+
+            <ImageView
+                android:id="@+id/lick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newest_viewpager_listview_item_ImageView"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/share"
+                android:src="@mipmap/ic_like_" />
+
+            <ImageView
+                android:id="@+id/detailed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newest_viewpager_listview_item_ImageView"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/lick"
+                android:src="@mipmap/ic_tabbar_comment" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -73,25 +73,25 @@ public class ListSubscriptionAdapter extends BaseAdapter {
         }
 
 
-        holder.tvBody.setText(bean.getFansCount()/10000.2f + "万人订阅");
+        holder.tvBody.setText(bean.getFansCount() / 10000.2f + "万人订阅");
         holder.tvHead.setText(bean.getName());
         holder.ivPicture.setSelected(false);
         GlideManger glide = GlideManger.getsInstance();
         glide.loadImageView(context, bean.getHeadImg(), holder.ivAvatar);
         //判断订阅点击的所有的true false
         final MyViewHolder finalHolder = holder;
-      //setSelected点击状态
-        if(bean.isSelected()){
+        //setSelected点击状态
+        if (bean.isSelected()) {
             holder.ivPicture.setSelected(true);
         }
         holder.ivPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //点击为false是已订阅
-                if(bean.isSelected()){
+                if (bean.isSelected()) {
                     bean.setSelected(false);
                     finalHolder.ivPicture.setSelected(false);
-                }else {
+                } else {
                     bean.setSelected(true);
                     finalHolder.ivPicture.setSelected(true);
                 }

@@ -19,6 +19,7 @@ public class HomeFragment extends BaseFragment {
     private ViewPager viewPager;
     private List<Fragment> data;
     private TabLayout tabLayout;
+
     @Override
     public int setLayout() {
         return R.layout.fragment_home;
@@ -29,15 +30,13 @@ public class HomeFragment extends BaseFragment {
 
         tabLayout = (TabLayout) view.findViewById(R.id.tab_home);
 
-
         // 把首页上面的TabLayout加
-        tabLayout.setTabTextColors(Color.BLACK,getContext().getResources().getColor(R.color.colorSkyBlue));
+        tabLayout.setTabTextColors(Color.BLACK, getContext().getResources().getColor(R.color.colorSkyBlue));
 
         viewPager = (ViewPager) view.findViewById(R.id.vp_home);
 
         // 将tabLayout的下划线颜色设置成白色
-        tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
-
+        tabLayout.setSelectedTabIndicatorColor(getContext().getResources().getColor(R.color.colorTransparent));
 
 
         data = new ArrayList<>();
@@ -49,8 +48,11 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void initData() {
-        HomeFragmentViewPage viewPage = new HomeFragmentViewPage(getChildFragmentManager(),data);
-        viewPager.setAdapter(viewPage);
+        HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(getChildFragmentManager(),data);
+        viewPager.setAdapter(adapter);
+
+
+
         tabLayout.setupWithViewPager(viewPager);
     }
 }

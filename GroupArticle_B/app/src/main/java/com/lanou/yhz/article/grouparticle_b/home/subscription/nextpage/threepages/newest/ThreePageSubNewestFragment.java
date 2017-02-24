@@ -22,6 +22,7 @@ public class ThreePageSubNewestFragment extends BaseFragment {
     private ListView listView;
     private ThreePageSubNewestFragmentAdapter adapter;
     private SubHottestAdapterBean data;
+
     @Override
     public int setLayout() {
         return R.layout.fragment_subnewest_threepage;
@@ -53,7 +54,7 @@ public class ThreePageSubNewestFragment extends BaseFragment {
             @Override
             public void onSuccessListener(String successStr) {
                 Gson gson = new Gson();
-                data = gson.fromJson(successStr,SubHottestAdapterBean.class);
+                data = gson.fromJson(successStr, SubHottestAdapterBean.class);
                 adapter.setData(data.getData().getResults());
                 listView.setAdapter(adapter);
                 Log.d("SubscriptionHomeFragmen", successStr);
