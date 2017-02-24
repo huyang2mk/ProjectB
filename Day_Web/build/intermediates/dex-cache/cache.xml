@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="46958051d44611d9cbc0f2dc8678b91bfa5b4333">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_44d9dfd004d0be6432708f3e49d5e4bd895ede62/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_b88b238734b6039f955ac1541c0685604abd23e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/android-sdks2/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_d04cc7b9cab604d47c73c0352469d46bb3f2dfcd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_1920205b34dad6246fe3d37723a4532ed1ca7320/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_c509c7eab8089539e441992386b0cd4106f5557b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_ff6216b591c4012063a072739a5369bbb97cd340/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_9c09bf3d68c74f3eb850417cbc40a4ffd5535d5e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_d25248e5d9c1dd8b5d06c3463c62f5187f603a81/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d0262d758229110233fe71d52f1322bedad43710">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4721f2b256a1121c85fd39e268f1024bfcf6268d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.0_072670272ecfe455c97c59abe10e82fd08019fef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_b0b093bcea9b324d5fd33df20509ed43b14107f2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_471acede450aae9d9f36ca933476d8cf696bcd56/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_a251bde402e369a67edcfa40c14b0e6808f524d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_48271b23492d4c22439f15de382c1be7590ebf9e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.0_d81ef23e6263abd32d3fe9735cad944e06f5aa4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_84c9962de6e8aad16587d100b6ddcef44db0a095/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/Users/dllo/Desktop/Bcode/ProjectB/Day_Web/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_aaf287c5aff9bf09ad359f32eaa1f788832cde08/classes.dex" />
+    </item>
+
+</items>
