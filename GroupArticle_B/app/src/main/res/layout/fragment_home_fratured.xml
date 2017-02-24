@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="asdasdasd"/>
-</LinearLayout>
+        android:layout_height="200dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/home_fratured_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <LinearLayout
+            android:id="@+id/home_fratured_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"/>
+    </FrameLayout>
+</ScrollView>
