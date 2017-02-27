@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_height="180dp">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/item_home_fratured_repeat_first_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:id="@+id/item_home_fratured_repeat_first_content"
+        android:layout_width="270dp"
+        android:layout_height="20dp"
+        android:textColor="@color/colorTransparent"
+        android:layout_alignBottom="@+id/item_home_fratured_repeat_first_imageview"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/item_home_fratured_repeat_first_time"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/time_background"
+        android:layout_alignBottom="@+id/item_home_fratured_repeat_first_imageview"
+        android:layout_alignRight="@+id/item_home_fratured_repeat_first_imageview"/>
+</RelativeLayout>

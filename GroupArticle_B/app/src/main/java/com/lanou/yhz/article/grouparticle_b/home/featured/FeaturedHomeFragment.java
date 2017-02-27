@@ -2,28 +2,37 @@ package com.lanou.yhz.article.grouparticle_b.home.featured;
 
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.base.BaseFragment;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BannerBean;
+import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BriefBean;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.DataBean;
-import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.FeaturedBean;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.RootBean;
 import com.lanou.yhz.article.grouparticle_b.home.featured.adapter.FeaturedPagerAdapter;
+import com.lanou.yhz.article.grouparticle_b.home.featured.adapter.FeaturedRepeatAdapter;
+import com.lanou.yhz.article.grouparticle_b.home.featured.adapter.FeaturedTodayAdapter;
 import com.lanou.yhz.article.grouparticle_b.ok.Constant;
 import com.lanou.yhz.article.grouparticle_b.ok.OkHttpManger;
 import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
+import com.lanou.yhz.article.grouparticle_b.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by dllo on 17/2/20.
+ * @author zhaochunyu
+ * 精选页
  */
 
 public class FeaturedHomeFragment extends BaseFragment {
@@ -33,9 +42,21 @@ public class FeaturedHomeFragment extends BaseFragment {
     private FeaturedPagerAdapter fpa;
     private List<BannerBean>data;
 
+    private List<BriefBean>briefBean;
+    private FeaturedTodayAdapter todayAdapter;
+    private RecyclerView todayRecycler;
+    private Button fraturedRefresh;
+
+    private List<DataBean.OfficalAlbumBean> officalBean;
+    private RecyclerView officalRecycler;
+    private FeaturedRepeatAdapter repeatAdapter;
+
+
     private Handler handler;
     private boolean isRotate = false;
     private Runnable rotateRunnable;
+
+    private TextView officalTv;
 
     @Override
     public int setLayout() {
@@ -46,10 +67,21 @@ public class FeaturedHomeFragment extends BaseFragment {
     public void initView(View view) {
         viewPager = (ViewPager) view.findViewById(R.id.home_fratured_viewpager);
         pointll = (LinearLayout) view.findViewById(R.id.home_fratured_linearlayout);
+        todayRecycler = (RecyclerView) view.findViewById(R.id.home_fratured_recycler_today);
+        fraturedRefresh = (Button) view.findViewById(R.id.home_fratured_btn_refresh);
+        officalRecycler = (RecyclerView) view.findViewById(R.id.home_fratured_recycler_officalAlbum);
+        officalTv = (TextView) view.findViewById(R.id.home_fratured_tv_offical);
+        fraturedRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                todayAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     @Override
     public void initData() {
+
         //构造数据
         buildDatas();
         fpa = new FeaturedPagerAdapter(context);
@@ -60,6 +92,16 @@ public class FeaturedHomeFragment extends BaseFragment {
         // 开始轮播
         handler = new Handler();
 
+        todayAdapter = new FeaturedTodayAdapter(context);
+        //设置Todayitem间距
+        int itemSpacing = 10;
+        todayRecycler.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        todayRecycler.setAdapter(todayAdapter);
+
+
+        repeatAdapter = new FeaturedRepeatAdapter(context);
+        officalRecycler.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        officalRecycler.setAdapter(repeatAdapter);
 
     }
 
@@ -146,19 +188,38 @@ public class FeaturedHomeFragment extends BaseFragment {
         OkHttpManger.getInstance().startPost(Constant.HOME_FEATURED, Constant.HOME_FEATURED_MAP,Constant.HOME_FEATURED_HEAD_MAP ,new OnNetResultListener() {
             @Override
             public void onSuccessListener(String successStr) {
-                Gson gson = new Gson();
-                RootBean rootBean = gson.fromJson(successStr,RootBean.class);
+                RootBean rootBean = new Gson().fromJson(successStr,RootBean.class);
                 DataBean dataBean = rootBean.getData();
                 data = dataBean.getBannerTop();
                 // 设置数据
                 fpa.setData(data);
+
+//                // 设置today数据
+                briefBean = dataBean.getTodayRecommend();
+                todayAdapter.setData(briefBean);
+                StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+                todayRecycler.setLayoutManager(manager);
+
+                // 设置offical数据
+
+                officalBean = dataBean.getOfficalAlbum();
+                repeatAdapter.setData(officalBean);
+                officalTv.setText(officalBean.get(0).getName());
+                GridLayoutManager layoutManager = new GridLayoutManager(context,2);
+
+                layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+                    @Override
+                    public int getSpanSize(int position) {
+                        return repeatAdapter.isHeader(position) ? 2 : 1;
+                    }
+                });
+                officalRecycler.setLayoutManager(layoutManager);
 
                 startRotate();
 //        // 添加轮播小点
                 addPoints();
 //        // 随着轮播改变小点
                 changePoints();
-
             }
 
             @Override
@@ -168,4 +229,6 @@ public class FeaturedHomeFragment extends BaseFragment {
         });
 
     }
+
+
 }

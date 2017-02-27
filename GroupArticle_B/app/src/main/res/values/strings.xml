@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GroupArticle_B</string>
+    <string name="fratured_today">今日推荐</string>
+    <string name="fratured_ranking">排行榜</string>
+    <string name="fratured_look">换一波看看</string>
+    <string name="fratured_more">更多</string>
 </resources>

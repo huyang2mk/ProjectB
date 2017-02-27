@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BannerBean;
@@ -53,7 +51,6 @@ public class FeaturedPagerAdapter extends PagerAdapter{
         View convertView = inflater.inflate(R.layout.item_home_fratured_head,container,false);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.item_home_fratured_head_iv);
         GlideManger.getsInstance().loadImageView(context,data.get(newPosition).getImgUrl(),imageView);
-
         container.addView(convertView);
         return convertView;
     }

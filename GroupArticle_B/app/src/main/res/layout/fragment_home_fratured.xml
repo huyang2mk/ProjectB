@@ -1,24 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF">
+<com.lanou.yhz.article.grouparticle_b.utils.MyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-
-    <FrameLayout
+    <LinearLayout
+        android:background="@color/colorFraturedBackGround"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/home_fratured_viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/home_fratured_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+            <LinearLayout
+                android:id="@+id/home_fratured_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"/>
+        </FrameLayout>
+
         <LinearLayout
-            android:id="@+id/home_fratured_linearlayout"
+            android:paddingTop="8dp"
+            android:background="@color/colorTransparent"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal"/>
-    </FrameLayout>
-</ScrollView>
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/home_fratured_iv_one"
+                    android:src="@mipmap/bg_community_top_indicator"
+                    android:layout_width="5dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/home_fratured_iv_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17sp"
+                    android:text="@string/fratured_today"/>
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/home_fratured_iv_two"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/newst_more_button"/>
+                <TextView
+                    android:id="@+id/home_fratured_ranking_tv"
+                    android:layout_toLeftOf="@+id/home_fratured_iv_two"
+                    android:layout_marginRight="3dp"
+                    android:textSize="13sp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fratured_ranking"/>
+                <ImageView
+                    android:layout_toLeftOf="@+id/home_fratured_ranking_tv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_home_cup" />
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_fratured_recycler_today"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/home_fratured_btn_refresh"
+                    android:textSize="13sp"
+                    android:text="@string/fratured_look"
+                    android:background="@color/colorButtonGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorTransparent"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/home_fratured_iv_three"
+                    android:src="@mipmap/bg_community_top_indicator"
+                    android:layout_width="5dp"
+                    android:textSize="17sp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="17sp"
+                    android:id="@+id/home_fratured_tv_offical"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/home_fratured_iv_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="13sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/fratured_more"/>
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_fratured_recycler_officalAlbum"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</com.lanou.yhz.article.grouparticle_b.utils.MyScrollView>
