@@ -59,11 +59,19 @@ public class SubscriptionHomeFragment extends BaseFragment {
         String postUrl = "http://api.rr.tv/v3plus/uper/recommendList";
         final String key1 = "clientVersion";
         final String value1 = "3.5.2";
+        final String keyNew1= "page";
+        final String valueNew1 = "1";
+        final String keyNew2= "rows";
+        final String valueNew2 = "10";
+
         Map<String, String> maps = new HashMap<>();
+        Map<String ,String> mapNew = new HashMap<>();
         maps.put(key1, value1);
+        mapNew.put(keyNew1,valueNew1);
+        mapNew.put(keyNew2,valueNew2);
 
         OkHttpManger okHttpManger = OkHttpManger.getInstance();
-        okHttpManger.startHeader(postUrl, maps, new OnNetResultListener() {
+        okHttpManger.startPost(postUrl, mapNew,maps, new OnNetResultListener() {
             @Override
             public void onSuccessListener(String successStr) {
 

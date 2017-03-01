@@ -9,7 +9,6 @@ import android.widget.ImageView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.base.BaseActivity;
-
 import com.lanou.yhz.article.grouparticle_b.home.HomeFragmentPagerAdapter;
 import com.lanou.yhz.article.grouparticle_b.home.subscription.nextpage.threepages.hottest.ThreePageSubHottestFragment;
 import com.lanou.yhz.article.grouparticle_b.home.subscription.nextpage.threepages.newest.ThreePageSubNewestFragment;
@@ -25,10 +24,14 @@ public class NextSubscriptionActivity extends BaseActivity {
     private ImageView iv_subscription_next_topbar_back;
     private List<Fragment> data;
     private TabLayout tabLayout;
+    private ImageView iv_subscription_next_picture;
+
 
     @Override
     protected int getLayout() {
+
         return R.layout.activity_next_subscription;
+
     }
 
     @Override
@@ -50,13 +53,24 @@ public class NextSubscriptionActivity extends BaseActivity {
         data = new ArrayList<>();
         data.add(new ThreePageSubNewestFragment());
         data.add(new ThreePageSubHottestFragment());
+        iv_subscription_next_picture = (ImageView) findViewById(R.id.iv_subscription_next_picture);
+        iv_subscription_next_picture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //地图
+            }
+        });
+
 
     }
+
 
     @Override
     protected void initData() {
         HomeFragmentPagerAdapter viewPage = new HomeFragmentPagerAdapter (getSupportFragmentManager(), data);
         viewPager.setAdapter(viewPage);
+
         tabLayout.setupWithViewPager(viewPager);
+
     }
 }

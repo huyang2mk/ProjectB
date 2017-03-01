@@ -5,10 +5,11 @@
     android:layout_margin="10dp"
     android:background="#FFFFFF">
 
-    <ImageView
+    <com.lanou.yhz.article.grouparticle_b.home.newest.headportrait.RoundHead
         android:id="@+id/iv_subscription_avatar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
         android:src="@mipmap/ic_launcher"
         android:scaleType="fitXY"
         />
@@ -19,20 +20,22 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/iv_subscription_avatar"
+        android:textSize="13sp"
         android:text="立威.胜"/>
     <TextView
         android:id="@+id/tv_body_subscription_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+
         android:layout_marginLeft="10dp"
         android:layout_below="@id/tv_head_subscription_item"
         android:layout_toRightOf="@id/iv_subscription_avatar"
+        android:textSize="11sp"
         android:text="3.9万人订阅"/>
     <ImageView
         android:id="@+id/iv_subscription_picture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70sp"
+        android:layout_height="23dp"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
         android:background="@drawable/ic_home_home_dingyue"/>
