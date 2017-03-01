@@ -5,4 +5,7 @@
     <string name="fratured_look">换一波看看</string>
     <string name="fratured_more">更多</string>
     <string name="fratured_up">UP主推荐</string>
+    <string name="vedio_comments">评论</string>
+    <string name="vedio_cache">缓存</string>
+    <string name="vedio_like">喜欢</string>
 </resources>

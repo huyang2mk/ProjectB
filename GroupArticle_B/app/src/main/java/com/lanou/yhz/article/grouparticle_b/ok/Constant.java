@@ -61,6 +61,9 @@ public class Constant {
         HOME_FEATURED_HEAD_MAP.put(key3, value3);
 
     }
+
+
+
     // 首页 最新 全部标题接口网址
     public final static String NEW_ITEM="http://api.rr.tv/v3plus/video/query";
 

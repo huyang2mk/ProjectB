@@ -11,7 +11,8 @@ import android.widget.TextView;
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.DataBean;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
-import com.lanou.yhz.article.grouparticle_b.utils.TestListener;
+
+import junit.framework.TestListener;
 
 import java.util.List;
 
@@ -74,7 +75,7 @@ public class FeaturedAdapter extends RecyclerView.Adapter{
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         int viewType = getItemViewType(position);
         switch (viewType){
             case FIRST:
@@ -88,12 +89,6 @@ public class FeaturedAdapter extends RecyclerView.Adapter{
                 secondHolder.timeTv.setText(data.get(0).getResultList().get(position).getDuration());
                 secondHolder.contentTv.setText(data.get(0).getResultList().get(position).getTitle());
                 GlideManger.getsInstance().loadImageView(context,data.get(0).getResultList().get(position).getCover(),secondHolder.imageView);
-                secondHolder.imageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        testListener.onC();
-                    }
-                });
                 break;
         }
     }

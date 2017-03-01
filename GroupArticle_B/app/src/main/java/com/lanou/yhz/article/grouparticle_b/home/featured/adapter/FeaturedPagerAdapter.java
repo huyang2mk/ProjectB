@@ -1,6 +1,7 @@
 package com.lanou.yhz.article.grouparticle_b.home.featured.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
+import com.lanou.yhz.article.grouparticle_b.VideoPlayerActivity;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BannerBean;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
 
@@ -47,11 +49,17 @@ public class FeaturedPagerAdapter extends PagerAdapter{
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        int newPosition = position % data.size();
+        final int newPosition = position % data.size();
         View convertView = inflater.inflate(R.layout.item_home_fratured_head,container,false);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.item_home_fratured_head_iv);
         GlideManger.getsInstance().loadImageView(context,data.get(newPosition).getImgUrl(),imageView);
         container.addView(convertView);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, VideoPlayerActivity.class).putExtra("id",data.get(newPosition).getId()+""));
+            }
+        });
         return convertView;
     }
 

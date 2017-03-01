@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.lanou.yhz.article.grouparticle_b.R;
@@ -31,7 +30,6 @@ import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
 import com.lanou.yhz.article.grouparticle_b.utils.MyGridLayoutManager;
 import com.lanou.yhz.article.grouparticle_b.utils.MyScrollView;
 import com.lanou.yhz.article.grouparticle_b.utils.SpacesItemDecoration;
-import com.lanou.yhz.article.grouparticle_b.utils.TestListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -160,12 +158,7 @@ public class FeaturedHomeFragment extends BaseFragment {
         repeatAdapter = new FeaturedAdapter(context);
         officalRecycler.addItemDecoration(new SpacesItemDecoration(itemSpacing));
         officalRecycler.setAdapter(repeatAdapter);
-        repeatAdapter.setTestListener(new TestListener() {
-            @Override
-            public void onC() {
-                Toast.makeText(context, "sssss", Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
         //设置up数据
         upAdapter = new FeaturedUpAdapter(context);

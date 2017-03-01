@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity" />
-        <activity android:name=".home.subscription.nextpage.NextSubscriptionActivity"></activity>
+        <activity android:name=".home.subscription.nextpage.NextSubscriptionActivity" />
+        <activity android:name=".VideoPlayerActivity"></activity>
     </application>
 
 </manifest>
