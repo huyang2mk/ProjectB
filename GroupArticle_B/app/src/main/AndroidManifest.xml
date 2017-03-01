@@ -64,9 +64,8 @@
 
         </activity>
 
-=======
         <activity android:name=".home.subscription.nextpage.threepages.activity.ThirdPagerSubHottestActivity"></activity>
->>>>>>> ce9c0ec24916a7265bdc12620e55e89d2edcaaf7
+
     </application>
 
 </manifest>
