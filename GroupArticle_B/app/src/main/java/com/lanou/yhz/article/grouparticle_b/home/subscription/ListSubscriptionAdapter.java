@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.subscriptionbean.SubscriptionBean;
+import com.lanou.yhz.article.grouparticle_b.home.newest.headportrait.RoundHead;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
 
 /**
@@ -101,21 +102,31 @@ public class ListSubscriptionAdapter extends BaseAdapter {
         });
 
 
+        final Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
+        thread.start();
         return convertView;
     }
 
     class MyViewHolder {
         TextView tvHead, tvBody;
-        ImageView ivAvatar, ivPicture;
+        ImageView ivPicture;
+        RoundHead ivAvatar ;
+
         boolean isSelected;
 
         public MyViewHolder(View view) {
             super();
             tvHead = (TextView) view.findViewById(R.id.tv_head_subscription_item);
             tvBody = (TextView) view.findViewById(R.id.tv_body_subscription_item);
-            ivAvatar = (ImageView) view.findViewById(R.id.iv_subscription_avatar);
+            ivAvatar = (RoundHead) view.findViewById(R.id.iv_subscription_avatar);
             ivPicture = (ImageView) view.findViewById(R.id.iv_subscription_picture);
             isSelected = false;
         }
     }
+
 }

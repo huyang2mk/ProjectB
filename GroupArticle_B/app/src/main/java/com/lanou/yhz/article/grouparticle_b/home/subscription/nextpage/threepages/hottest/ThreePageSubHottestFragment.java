@@ -1,8 +1,10 @@
 package com.lanou.yhz.article.grouparticle_b.home.subscription.nextpage.threepages.hottest;
 
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 
 import com.google.gson.Gson;
 import com.lanou.yhz.article.grouparticle_b.R;
@@ -19,8 +21,8 @@ import java.util.Map;
  */
 
 public class ThreePageSubHottestFragment extends BaseFragment {
-    private ListView listView;
-    private ThreePageSubHottestFragmentAdapter adapter;
+    private RecyclerView recyclerView;
+    private ThirdPagerSubHottestFragmentAdapter adapter;
     private SubHottestAdapterBean data;
 
     @Override
@@ -31,13 +33,13 @@ public class ThreePageSubHottestFragment extends BaseFragment {
     @Override
     public void initView(View view) {
 
-        listView = (ListView) view.findViewById(R.id.lv_subscription_next_hottest);
+        recyclerView = (RecyclerView) view.findViewById(R.id.rv_subscription_next_hottest);
     }
 
     @Override
     public void initData() {
 
-        adapter = new ThreePageSubHottestFragmentAdapter(context);
+        adapter = new ThirdPagerSubHottestFragmentAdapter(context);
         postRequest();
     }
 
@@ -46,19 +48,35 @@ public class ThreePageSubHottestFragment extends BaseFragment {
         final String key1 = "clientVersion";
         final String value1 = "3.5.2";
         final String key2 = "token";
-        final String value2 = "c180f7cb746589e634b1098d16c07e7e2bd75f8b";
+        final String value2 = "eee81b095e3041403c9c2ee7bf1e1c75076c9e8d";
+        final String keyBody1 = "sort";
+        final String valueBody1 = "updateTime";
+        final String keyBody2 = "page";
+        final String valueBody2 = "1";
+        final String keyBody3 = "userId";
+        final String valueBody3 = "7972372";
+        final String keyBody4 = "rows";
+        final String valueBody4 = "10";
         Map<String, String> maps = new HashMap<>();
         maps.put(key1, value1);
         maps.put(key2, value2);
+        Map<String ,String > mapBody = new HashMap<>();
+        mapBody.put(keyBody1,valueBody1);
+        mapBody.put(keyBody2,valueBody2);
+        mapBody.put(keyBody3,valueBody3);
+        mapBody.put(keyBody4,valueBody4);
 
         OkHttpManger okHttpManger = OkHttpManger.getInstance();
-        okHttpManger.startHeader(postUrl, maps, new OnNetResultListener() {
+        okHttpManger.startPost(postUrl, mapBody,maps, new OnNetResultListener() {
             @Override
             public void onSuccessListener(String successStr) {
                 Gson gson = new Gson();
                 data = gson.fromJson(successStr, SubHottestAdapterBean.class);
                 adapter.setData(data.getData().getResults());
-                listView.setAdapter(adapter);
+                recyclerView.setAdapter(adapter);
+                LinearLayoutManager lmanger = new LinearLayoutManager(context, LinearLayout.VERTICAL,true);
+                recyclerView.setLayoutManager(lmanger);
+
                 Log.d("SubscriptionHomeFragmen", successStr);
             }
 

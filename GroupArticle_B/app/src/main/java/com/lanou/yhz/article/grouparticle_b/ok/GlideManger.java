@@ -12,8 +12,6 @@ import com.lanou.yhz.article.grouparticle_b.R;
 public class GlideManger extends ImageManager{
 
     private static GlideManger sInstance;
-
-
     public static GlideManger getsInstance(){
         if (sInstance ==null){
             sInstance = new GlideManger();

@@ -1,103 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_next_subscription"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.lanou.yhz.article.grouparticle_b.home.subscription.nextpage.NextSubscriptionActivity">
+    android:background="#ffffff"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-    <LinearLayout
-        android:id="@+id/linerlayout_home_sub_next"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/singer_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAshen"
-        android:orientation="vertical"
-        android:paddingBottom="20dp">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-<ImageView
-    android:id="@+id/iv_subscription_next_topbar_back"
-    android:layout_width="25dp"
-    android:layout_height="25dp"
-    android:background="@mipmap/ic_topbar_back"
-    android:layout_margin="10dp"/>
-        <ImageView
-            android:id="@+id/iv_subscription_next_share"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_nav_share"
-            android:layout_margin="10dp"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/iv_subscription_next_avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@mipmap/ic_launcher"/>
-        <TextView
-            android:id="@+id/tv_subscription_next_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="非著名网不红贱贱"
-            android:textSize="15sp"
-            android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@id/iv_subscription_next_avatar"/>
-        <TextView
-            android:id="@+id/tv_subscription_next_fans"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="14.7万订阅"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:textSize="12sp"
-            android:layout_toRightOf="@id/iv_subscription_next_avatar"
-            android:layout_below="@id/tv_subscription_next_title"/>
+        android:fitsSystemWindows="true">
 
-        <TextView
-            android:id="@+id/tv_subscription_next_compilation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="# 合辑 71"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/colorSkyBlue"
-            android:layout_below="@id/tv_subscription_next_title"
-            android:layout_marginLeft="5dp"
-            android:textSize="12sp"
-            android:layout_toRightOf="@id/tv_subscription_next_fans"
-            />
-        <ImageView
-            android:id="@+id/iv_subscription_next_picture"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            android:background="@drawable/ic_home_home_dingyue"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="7dp"/>
-        <TextView
-            android:id="@+id/tv_subscription_next_food"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="我不在乎多少人不喜欢我"
-            android:textSize="13sp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@id/iv_subscription_next_avatar"
-            android:layout_below="@id/tv_subscription_next_fans"/>
-    </RelativeLayout>
-    </LinearLayout>
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tab_home_subscription_next"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:tag="20sp"></android.support.design.widget.TabLayout>
+        <android.support.design.widget.CollapsingToolbarLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/singer_cool_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorAshen"
+            app:expandedTitleMarginEnd="30dp"
+            app:expandedTitleMarginStart="30dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/qq20170301"
+                    android:layout_alignBottom="@+id/linerlayout_home_sub_next" />
+            <LinearLayout
+                android:id="@+id/linerlayout_home_sub_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#7f000000"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_subscription_next_topbar_back"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:background="@mipmap/ic_topbar_back" />
+
+                    <ImageView
+                        android:id="@+id/iv_subscription_next_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/btn_nav_share" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_subscription_next_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tv_subscription_next_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/iv_subscription_next_avatar"
+                        android:text="非著名网不红贱贱"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_subscription_next_fans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_subscription_next_title"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/iv_subscription_next_avatar"
+                        android:text="14.7万订阅"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_subscription_next_compilation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_subscription_next_title"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/tv_subscription_next_fans"
+                        android:text="# 合辑 71"
+                        android:textColor="@color/colorSkyBlue"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_subscription_next_picture"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="7dp"
+                        android:background="@drawable/ic_home_home_dingyue" />
+
+                    <TextView
+                        android:id="@+id/tv_subscription_next_food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_subscription_next_fans"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/iv_subscription_next_avatar"
+                        android:text="我不在乎多少人不喜欢我"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+            </RelativeLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_home_subscription_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:tag="20sp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_home_subsciption_next"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"></android.support.v4.view.ViewPager>
-</LinearLayout>
+        android:layout_marginRight="10dp"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>
