@@ -15,26 +15,25 @@ import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
 import java.util.List;
 
 /**
- * Created by zhaochunyu on 2017/2/25.
+ * Created by zhaochunyu on 2017/2/27.
  * @author zhaochunyu
- * 精选适配器
+ * 公用的适配器
  */
 
-public class FeaturedRepeatAdapter extends RecyclerView.Adapter{
+public class FeaturedMyAdapter extends RecyclerView.Adapter{
     private Context context;
-    private List<DataBean.OfficalAlbumBean>data;
+    private List<DataBean.CategoryBean> data;
+    private int num;
 
-
-    public FeaturedRepeatAdapter(Context context) {
-        super();
+    public FeaturedMyAdapter(Context context) {
         this.context = context;
     }
 
-    public void setData(List<DataBean.OfficalAlbumBean> data) {
+    public void setData(List<DataBean.CategoryBean> data ,int num) {
         this.data = data;
+        this.num = num;
         notifyDataSetChanged();
     }
-
     public static final int FIRST = 1;
     public static final int SECOND = 2;
 
@@ -56,11 +55,11 @@ public class FeaturedRepeatAdapter extends RecyclerView.Adapter{
         switch (viewType){
             case FIRST:
                 View fisrtView = LayoutInflater.from(context).inflate(R.layout.item_home_fratured_repeat_first,parent,false);
-                holder = new FirstViewHolder(fisrtView);
+                holder = new FirstMyViewHolder(fisrtView);
                 break;
             case SECOND:
                 View secondView = LayoutInflater.from(context).inflate(R.layout.item_home_fratured_repeat_second,parent,false);
-                holder = new SecondViewHolder(secondView);
+                holder = new SecondMyViewHolder(secondView);
                 break;
         }
         return holder;
@@ -71,16 +70,16 @@ public class FeaturedRepeatAdapter extends RecyclerView.Adapter{
         int viewType = getItemViewType(position);
         switch (viewType){
             case FIRST:
-                FirstViewHolder firstHolder = (FirstViewHolder) holder;
-                firstHolder.timeTv.setText(data.get(0).getResultList().get(position).getDuration());
-                firstHolder.contentTv.setText(data.get(0).getResultList().get(position).getTitle());
-                GlideManger.getsInstance().loadImageView(context,data.get(0).getResultList().get(position).getCover(),firstHolder.imageView);
+                FeaturedMyAdapter.FirstMyViewHolder firstHolder = (FirstMyViewHolder) holder;
+                firstHolder.timeTv.setText(data.get(num).getVideoList().get(position).getDuration());
+                firstHolder.contentTv.setText(data.get(num).getVideoList().get(position).getTitle());
+                GlideManger.getsInstance().loadImageView(context,data.get(num).getVideoList().get(position).getCover(),firstHolder.imageView);
                 break;
             case SECOND:
-                SecondViewHolder secondHolder = (SecondViewHolder) holder;
-                secondHolder.timeTv.setText(data.get(0).getResultList().get(position).getDuration());
-                secondHolder.contentTv.setText(data.get(0).getResultList().get(position).getTitle());
-                GlideManger.getsInstance().loadImageView(context,data.get(0).getResultList().get(position).getCover(),secondHolder.imageView);
+                FeaturedMyAdapter.SecondMyViewHolder secondHolder = (SecondMyViewHolder) holder;
+                secondHolder.timeTv.setText(data.get(num).getVideoList().get(position).getDuration());
+                secondHolder.contentTv.setText(data.get(num).getVideoList().get(position).getTitle());
+                GlideManger.getsInstance().loadImageView(context,data.get(num).getVideoList().get(position).getCover(),secondHolder.imageView);
                 break;
         }
     }
@@ -92,20 +91,20 @@ public class FeaturedRepeatAdapter extends RecyclerView.Adapter{
 
 
 
-    class FirstViewHolder extends RecyclerView.ViewHolder{
+    class FirstMyViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
         TextView contentTv,timeTv;
-        public FirstViewHolder(View itemView) {
+        public FirstMyViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.item_home_fratured_repeat_first_imageview);
             contentTv = (TextView) itemView.findViewById(R.id.item_home_fratured_repeat_first_content);
             timeTv = (TextView) itemView.findViewById(R.id.item_home_fratured_repeat_first_time);
         }
     }
-    class SecondViewHolder extends RecyclerView.ViewHolder{
+    class SecondMyViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
         TextView contentTv,timeTv;
-        public SecondViewHolder(View itemView) {
+        public SecondMyViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.item_home_fratured_repeat_second_imageview);
             contentTv = (TextView) itemView.findViewById(R.id.item_home_fratured_repeat_second_content);

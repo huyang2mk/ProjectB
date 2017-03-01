@@ -180,7 +180,7 @@ public class DataBean {
     public static class CategoryBean{
         private String categoryName;
         private int id;
-        private List<BriefBean> videoList;
+        private List<VedioBean> videoList;
 
         public String getCategoryName() {
             return categoryName;
@@ -198,11 +198,11 @@ public class DataBean {
             this.id = id;
         }
 
-        public List<BriefBean> getVideoList() {
+        public List<VedioBean> getVideoList() {
             return videoList;
         }
 
-        public void setVideoList(List<BriefBean> videoList) {
+        public void setVideoList(List<VedioBean> videoList) {
             this.videoList = videoList;
         }
     }

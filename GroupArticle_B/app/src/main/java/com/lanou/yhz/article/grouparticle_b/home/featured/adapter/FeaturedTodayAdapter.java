@@ -32,6 +32,7 @@ public class FeaturedTodayAdapter extends RecyclerView.Adapter<FeaturedTodayAdap
 
     public void setData(List<BriefBean> data) {
         this.data = data;
+        notifyDataSetChanged();
     }
 
     @Override
