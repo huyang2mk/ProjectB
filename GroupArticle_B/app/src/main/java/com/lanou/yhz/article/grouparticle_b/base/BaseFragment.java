@@ -28,7 +28,7 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Log.d("BaseFragment", "aaa");
+
         return inflater.inflate(setLayout(), container, false);
     }
 
@@ -37,7 +37,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.d("BaseFragment", "bbb");
+
         initView(view);
     }
 
@@ -45,7 +45,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Log.d("BaseFragment", "ccc");
+
         initData();
     }
 

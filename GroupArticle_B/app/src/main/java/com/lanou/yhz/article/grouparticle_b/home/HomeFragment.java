@@ -11,11 +11,13 @@ import com.lanou.yhz.article.grouparticle_b.base.BaseFragment;
 import com.lanou.yhz.article.grouparticle_b.home.featured.FeaturedHomeFragment;
 import com.lanou.yhz.article.grouparticle_b.home.newest.NewestHomeFragment;
 import com.lanou.yhz.article.grouparticle_b.home.subscription.SubscriptionHomeFragment;
+import com.lanou.yhz.article.grouparticle_b.ok.OkHttpManger;
+import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment  {
     private ViewPager viewPager;
     private List<Fragment> data;
     private TabLayout tabLayout;
@@ -48,11 +50,17 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void initData() {
+
         HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(getChildFragmentManager(),data);
+
         viewPager.setAdapter(adapter);
 
 
 
         tabLayout.setupWithViewPager(viewPager);
+
+
     }
+
+
 }

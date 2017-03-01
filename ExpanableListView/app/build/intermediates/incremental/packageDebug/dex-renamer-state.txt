@@ -1,7 +1,0 @@
-#Thu Feb 23 16:20:53 CST 2017
-base.0=/Users/dllo/Desktop/Bcode/ProjectB/ExpanableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_f2bba1c87e5427b47e6a83bdc66b11a10598b3b8
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/dllo/Desktop/Bcode/ProjectB/ExpanableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_958b651df78daf2500e532e1f726a1922d693d27/classes.dex
-base.1=/Users/dllo/Desktop/Bcode/ProjectB/ExpanableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_958b651df78daf2500e532e1f726a1922d693d27
-file.0=/Users/dllo/Desktop/Bcode/ProjectB/ExpanableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_f2bba1c87e5427b47e6a83bdc66b11a10598b3b8/classes.dex

@@ -44,30 +44,43 @@ import java.util.List;
 //最新页面的总fragment的适配器
 public class NewestHomeAdapter extends FragmentPagerAdapter {
     private List<NewTitleBean.DataBean.CategoryBean> data;
-    private List<Fragment> fragments;
+
+
 
     public NewestHomeAdapter(FragmentManager fm) {
         super(fm);
     }
 
-    public void setData(List<NewTitleBean.DataBean.CategoryBean> data, List<Fragment> fragments) {
+    public void setData(List<NewTitleBean.DataBean.CategoryBean> data ) {
         this.data = data;
-        this.fragments = fragments;
         notifyDataSetChanged();
     }
 
+
+
+
     @Override
     public Fragment getItem(int position) {
-        return fragments.get(position);
+        if (position == 0){
+            return ViewPgerNewestHomeFragment.newInstance(0);
+        }else {
+            int channelID = data.get(position-1).getId();
+            return ViewPgerNewestHomeFragment.newInstance(channelID);
+        }
+
     }
 
     @Override
     public int getCount() {
-        return data != null ? data.size() : 0;
+        return data != null ? data.size()+1 : 0;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return data.get(position).getName();
+        if (position==0) {
+            return "全部";
+        }
+            return data.get(position-1).getName();
+
     }
 }

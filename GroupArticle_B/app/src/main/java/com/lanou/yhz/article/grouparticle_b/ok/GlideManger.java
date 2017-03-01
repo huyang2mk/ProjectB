@@ -27,7 +27,7 @@ public class GlideManger extends ImageManager{
     public void loadImageView(Context context, String imgUrl, ImageView imageView) {
 
         Glide.with(context).load(imgUrl)//请求的图片地址
-                .error(R.mipmap.ic_launcher)//请求错误的图片
+               // .error(R.mipmap.ic_launcher)//请求错误的图片
                 .into(imageView);//要设置的组件
     }
 

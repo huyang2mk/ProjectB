@@ -230,6 +230,43 @@ public class OkHttpManger {
         });
     }
 
+    private void _startPost(final String url, final Map<String, String> body,final Map<String, String> head, final OnNetResultListener listener) {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                FormBody.Builder buildder =
+                        new FormBody.Builder();
+
+                Set set = body.keySet();
+
+                Iterator iterator = set.iterator();
+                while (iterator.hasNext()) {
+                    String key = (String) iterator.next();
+                    String value = body.get(key);
+                    buildder.add(key, value);
+                }
+                // 请求体构建
+                RequestBody requesBody = buildder.build();
+
+                // 根据header构建request
+                Request.Builder requestBuilder = new Request.Builder();
+                requestBuilder.url(url);
+
+                Set headSet = head.keySet();
+                Iterator headI = headSet.iterator();
+                while (headI.hasNext()){
+                    String k = (String) headI.next();
+                    String v = head.get(k);
+                    requestBuilder.addHeader(k,v);
+                }
+                Request request = requestBuilder.post(requesBody).build();
+                createCall(request, listener);
+
+            }
+        }).start();
+    }
 
     // *********************提供给外部的操作方法*************************
 
@@ -251,6 +288,10 @@ public class OkHttpManger {
 
     public void startPost(String url, Map<String, String> body, OnNetResultListener listener) {
         _startPost(url, body, listener);
+    }
+
+    public void startPost(String url, Map<String, String> body,Map<String,String> head, OnNetResultListener listener) {
+        _startPost(url, body, head,listener);
     }
 
 }

@@ -1,10 +1,11 @@
 package com.lanou.yhz.article.grouparticle_b.home.newest;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.lanou.yhz.article.grouparticle_b.R;
@@ -14,7 +15,8 @@ import com.lanou.yhz.article.grouparticle_b.ok.Constant;
 import com.lanou.yhz.article.grouparticle_b.ok.OkHttpManger;
 import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
 
-import java.util.Map;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.onekeyshare.OnekeyShare;
 
 /**
  * Created by dllo on 17/2/21.
@@ -52,22 +54,23 @@ import java.util.Map;
 
 // 最新页面,每个Tablayout的item页
 
-public class ViewPgerNewestHomeFragment extends BaseFragment {
+public class ViewPgerNewestHomeFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
 
-    //private TextView showTv;
+    // 下拉刷新
+    private SwipeRefreshLayout mSwipeLayout;
     private ListView listView;
     private ViewPgerNewestHomeAdapter adapter;
 
 
     // 复用机制
-    public static ViewPgerNewestHomeFragment newInstance(int id, String token) {
+    public static ViewPgerNewestHomeFragment newInstance(int channelsId) {
 
         Bundle args = new Bundle();
-        args.putInt("id", id);
-        args.putString("token", token);
+        args.putInt("id", channelsId);
         ViewPgerNewestHomeFragment fragment = new ViewPgerNewestHomeFragment();
         fragment.setArguments(args);
         return fragment;
+
     }
 
     @Override
@@ -77,36 +80,40 @@ public class ViewPgerNewestHomeFragment extends BaseFragment {
 
     @Override
     public void initView(View view) {
-        //showTv = (TextView) view.findViewById(R.id.ttttt_v);
+        networkRequest();
         listView = (ListView) view.findViewById(R.id.fragment_home_newest_viewpager_listview);
+        mSwipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_container);
+
 
     }
 
     @Override
     public void initData() {
+
+
+
+        //  下拉刷新
+        downRefresh();
+        // (复用中)总fragment 通过适配器的方法传过来每个title的ID
         Bundle bundle = getArguments();
         int id = bundle.getInt("id");
-        String token = bundle.getString("token");
+        Constant.NEW_MAP_BODY_VIEWPAGER.put("categoryId", id + "");
 
-        //showTv.setText(id + "-----" + token);
+        Log.d("ViewPgerNewestHomeFragm", "id:" + id);
 
 
-        String key = "token";
 
-        Constant.NEW_MAP_VIEWPAGER.put(key, token);
 
-        Log.d("ViewPgerNewestHomeFragm", token);
+    }
 
-        // 网络请求
-        OkHttpManger.getInstance().startHeader(Constant.NEW_VIEWPAGER, Constant.NEW_MAP_VIEWPAGER, new OnNetResultListener() {
+    private void networkRequest() {
+        OkHttpManger.getInstance().startPost(Constant.NEW_VIEWPAGER, Constant.NEW_MAP_BODY_VIEWPAGER, Constant.NEW_MAP_POST_HEAT, new OnNetResultListener() {
             @Override
             public void onSuccessListener(String successStr) {
-
                 Gson gson = new Gson();
                 NewestViewPgerBean bean = gson.fromJson(successStr, NewestViewPgerBean.class);
-
-                //Log.d("ViewPgerNewestHomeFragm", "bean.getData().getCurrentPage():" + bean.getData().getResults());
                 adapter = new ViewPgerNewestHomeAdapter(context);
+
                 listView.setAdapter(adapter);
                 adapter.setData(bean.getData().getResults());
             }
@@ -118,6 +125,39 @@ public class ViewPgerNewestHomeFragment extends BaseFragment {
         });
     }
 
+    // 设置下拉刷新的属性
+    private void downRefresh() {
+
+        mSwipeLayout.setOnRefreshListener(this);
+        // 设置下拉圆圈上的颜色，蓝色、绿色、橙色、红色
+        mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
+                android.R.color.holo_orange_light, android.R.color.holo_red_light);
+        mSwipeLayout.setDistanceToTriggerSync(400);// 设置手指在屏幕下拉多少距离会触发下拉刷新
+        mSwipeLayout.setSize(SwipeRefreshLayout.LARGE); // 设置圆圈的大小
+    }
+
+    // 下拉刷新方法
+    @Override
+    public void onRefresh() {
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // 停止刷新
+                mSwipeLayout.setRefreshing(false);
+                // (复用中)总fragment 通过适配器的方法传过来每个title的ID
+                Bundle bundle = getArguments();
+                int id = bundle.getInt("id");
+                Constant.NEW_MAP_BODY_VIEWPAGER.put("categoryId", id + "");
+
+                // 网络请求
+
+                networkRequest();
+            }
+        }, 5000); // 5秒后发送消息，停止刷新
+
+
+    }
 
 
 }
