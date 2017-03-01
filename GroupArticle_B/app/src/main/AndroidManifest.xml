@@ -31,6 +31,7 @@
         </activity>
         <activity android:name=".SecondActivity" />
         <activity android:name=".home.subscription.nextpage.NextSubscriptionActivity" />
+<<<<<<< HEAD
 
         <activity android:name=".videoplayer.NewsVideoActivity"></activity>
 
@@ -66,6 +67,9 @@
 
         <activity android:name=".home.subscription.nextpage.threepages.activity.ThirdPagerSubHottestActivity"></activity>
 
+=======
+        <activity android:name=".VideoPlayerActivity"></activity>
+>>>>>>> feature/首页_精选
     </application>
 
 </manifest>

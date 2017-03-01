@@ -33,6 +33,37 @@ public class Constant {
         NEW_TITLE_MAP.put(key3, value3);
 
     }
+    // 首页 精选接口网址
+    public final static String HOME_FEATURED="http://api.rr.tv/v3plus/index/collection";
+    public final static Map<String,String>HOME_FEATURED_MAP = new HashMap<>();
+    //首页 精选接口网址的key,value
+    static {
+        String key1 = "clientType";
+        String value1 = "android_%E7%99%BE%E5%BA%A6";
+        String key2 = "token";
+        String value2 = "78ff854d0e6a2945773d56500a3583921ac73805";
+        String key3 = "clientVersion";
+        String value3 = "3.5.2";
+        HOME_FEATURED_MAP.put(key1, value1);
+        HOME_FEATURED_MAP.put(key2, value2);
+        HOME_FEATURED_MAP.put(key3, value3);
+
+    }
+
+
+
+    public final static Map<String,String>HOME_FEATURED_HEAD_MAP = new HashMap<>();
+    //首页 精选接口网址的key,value
+    static {
+
+
+        String key3 = "clientVersion";
+        String value3 = "3.5.2";
+        HOME_FEATURED_HEAD_MAP.put(key3, value3);
+
+    }
+
+
 
 
     // 首页 除了(全部) 全部item接口网址的key,value
@@ -84,6 +115,5 @@ public class Constant {
         NEW_MAP_VIDEO.put(key, value);
 
     }
-
 
 }
