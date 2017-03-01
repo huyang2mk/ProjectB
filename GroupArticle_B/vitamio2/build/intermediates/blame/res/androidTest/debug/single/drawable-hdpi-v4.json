@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_launcher.png"
+    },
+    {
         "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_launcher.png",
         "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_launcher.png"
     }
