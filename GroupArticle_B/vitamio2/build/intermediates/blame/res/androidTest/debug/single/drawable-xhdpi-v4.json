@@ -1,162 +1,42 @@
 [
     {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_primary_holo.9.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_primary_holo.9.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_primary_holo.9.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_primary_holo.9.png"
     },
     {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_pressed_holo.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_pressed_holo.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_pause.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_pause.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_play.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_play.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_normal_holo.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_normal_holo.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_play.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_play.png"
     },
     {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_launcher.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_launcher.png"
     },
     {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_launcher.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_launcher.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_secondary_holo.9.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_secondary_holo.9.png"
     },
     {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_secondary_holo.9.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_secondary_holo.9.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_disabled_holo.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_disabled_holo.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_pause.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_pause.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_focused_holo.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_focused_holo.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_launcher.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_launcher.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_normal_holo.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_normal_holo.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_pause.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_pause.png"
-    },
-    {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_play.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_play.png"
-    },
-    {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_normal_holo.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_normal_holo.png"
-    },
-    {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_focused_holo.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_focused_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_focused_holo.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_focused_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_primary_holo.9.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_primary_holo.9.png"
-    },
-    {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_disabled_holo.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_disabled_holo.png"
-    },
-    {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_pressed_holo.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_pressed_holo.png"
-    },
-    {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_normal_holo.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_normal_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_focused_holo.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_focused_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_launcher.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_secondary_holo.9.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_secondary_holo.9.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_normal_holo.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_normal_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_secondary_holo.9.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_secondary_holo.9.png"
-    },
-    {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_disabled_holo.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_disabled_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_play.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_play.png"
-    },
-    {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_primary_holo.9.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_primary_holo.9.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_pressed_holo.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_pressed_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_disabled_holo.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_disabled_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_pause.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_pause.png"
-    },
-    {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_play.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_play.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_secondary_holo.9.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_secondary_holo.9.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png",
-        "source": "/Users/dllo/Desktop/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png"
-    },
-    {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_pause.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_pause.png"
-    },
-    {
-        "merged": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_launcher.png",
-        "source": "/Users/dllo/Downloads/哦哦哦/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_disabled_holo.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_disabled_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png"
-    },
-    {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_primary_holo.9.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_primary_holo.9.png"
-    },
-    {
-        "merged": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png",
-        "source": "/AndroidStudioCode/VitamioDemo/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_pressed_holo.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_pressed_holo.png"
-    },
-    {
-        "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_focused_holo.png",
-        "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_focused_holo.png"
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_pressed_holo.png",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_pressed_holo.png"
     }
 ]
