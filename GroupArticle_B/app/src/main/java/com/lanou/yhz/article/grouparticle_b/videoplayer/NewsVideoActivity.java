@@ -3,12 +3,10 @@ package com.lanou.yhz.article.grouparticle_b.videoplayer;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -30,6 +28,7 @@ import io.vov.vitamio.widget.VideoView;
  */
 public class NewsVideoActivity extends BaseActivity implements MediaPlayer.OnInfoListener, MediaPlayer.OnBufferingUpdateListener {
 
+    private android.widget.VideoView w;
 
     private Uri uri;
     private ProgressBar pb;
@@ -48,6 +47,7 @@ public class NewsVideoActivity extends BaseActivity implements MediaPlayer.OnInf
     protected void initView() {
 
         mVideoView = (VideoView) findViewById(R.id.buffer);
+        //w.setMediaController(new MediaController());
         mCustomMediaController = new CustomMediaController(this, mVideoView, this);
         mCustomMediaController.setVideoName("白火锅 x 红火锅");
         pb = (ProgressBar) findViewById(R.id.probar);
@@ -163,8 +163,11 @@ public class NewsVideoActivity extends BaseActivity implements MediaPlayer.OnInf
     public void onConfigurationChanged(Configuration newConfig) {
         //屏幕切换时，设置全屏
         if (mVideoView != null) {
+
             mVideoView.setVideoLayout(VideoView.VIDEO_LAYOUT_SCALE, 0);
+
         }
+
         super.onConfigurationChanged(newConfig);
     }
 
