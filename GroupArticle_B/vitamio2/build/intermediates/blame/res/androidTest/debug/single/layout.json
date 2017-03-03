@@ -1,5 +1,12 @@
 [
     {
+<<<<<<< HEAD
+=======
+        "merged": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/layout/mediacontroller.xml",
+        "source": "/Users/zhaochunyu/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/layout/mediacontroller.xml"
+    },
+    {
+>>>>>>> b5845fa890feda85bb11c0727db62b9bbe7926d9
         "merged": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/res/merged/androidTest/debug/layout/mediacontroller.xml",
         "source": "/Users/dllo/Desktop/Bcode/ProjectB/GroupArticle_B/vitamio2/build/intermediates/bundles/debug/res/layout/mediacontroller.xml"
     }
