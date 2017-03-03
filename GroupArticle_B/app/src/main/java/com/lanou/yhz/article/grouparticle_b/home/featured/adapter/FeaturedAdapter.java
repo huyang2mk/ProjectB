@@ -2,17 +2,17 @@ package com.lanou.yhz.article.grouparticle_b.home.featured.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.DataBean;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
-
-import junit.framework.TestListener;
 
 import java.util.List;
 
@@ -25,12 +25,18 @@ import java.util.List;
 public class FeaturedAdapter extends RecyclerView.Adapter{
     private Context context;
     private List<DataBean.OfficalAlbumBean>data;
-
-    private TestListener testListener;
-
-    public void setTestListener(TestListener testListener) {
-        this.testListener = testListener;
+    //监听事件
+    public interface MyOnClickListener {
+        void onClick(int position );
     }
+
+    //监听事件
+    private MyOnClickListener myOnClickListener;
+
+    public void setMyOnClickListener(MyOnClickListener myOnClickListener) {
+        this.myOnClickListener = myOnClickListener;
+    }
+
 
     public FeaturedAdapter(Context context) {
         super();
@@ -76,6 +82,7 @@ public class FeaturedAdapter extends RecyclerView.Adapter{
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+        Log.d("FeaturedAdapter", "position:" + position);
         int viewType = getItemViewType(position);
         switch (viewType){
             case FIRST:
@@ -83,12 +90,24 @@ public class FeaturedAdapter extends RecyclerView.Adapter{
                 firstHolder.timeTv.setText(data.get(0).getResultList().get(position).getDuration());
                 firstHolder.contentTv.setText(data.get(0).getResultList().get(position).getTitle());
                 GlideManger.getsInstance().loadImageView(context,data.get(0).getResultList().get(position).getCover(),firstHolder.imageView);
+                firstHolder.relativeLayout1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        myOnClickListener.onClick(position);
+                    }
+                });
                 break;
             case SECOND:
                 SecondViewHolder secondHolder = (SecondViewHolder) holder;
                 secondHolder.timeTv.setText(data.get(0).getResultList().get(position).getDuration());
                 secondHolder.contentTv.setText(data.get(0).getResultList().get(position).getTitle());
                 GlideManger.getsInstance().loadImageView(context,data.get(0).getResultList().get(position).getCover(),secondHolder.imageView);
+                secondHolder.relativeLayout2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        myOnClickListener.onClick(position);
+                    }
+                });
                 break;
         }
     }
@@ -103,8 +122,10 @@ public class FeaturedAdapter extends RecyclerView.Adapter{
     class FirstViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
         TextView contentTv,timeTv;
+        RelativeLayout relativeLayout1;
         public FirstViewHolder(View itemView) {
             super(itemView);
+            relativeLayout1 = (RelativeLayout) itemView.findViewById(R.id.item_home_fratured_repeat_first);
             imageView = (ImageView) itemView.findViewById(R.id.item_home_fratured_repeat_first_imageview);
             contentTv = (TextView) itemView.findViewById(R.id.item_home_fratured_repeat_first_content);
             timeTv = (TextView) itemView.findViewById(R.id.item_home_fratured_repeat_first_time);
@@ -113,8 +134,10 @@ public class FeaturedAdapter extends RecyclerView.Adapter{
     class SecondViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
         TextView contentTv,timeTv;
+        RelativeLayout relativeLayout2;
         public SecondViewHolder(View itemView) {
             super(itemView);
+            relativeLayout2 = (RelativeLayout) itemView.findViewById(R.id.item_home_fratured_repeat_second);
             imageView = (ImageView) itemView.findViewById(R.id.item_home_fratured_repeat_second_imageview);
             contentTv = (TextView) itemView.findViewById(R.id.item_home_fratured_repeat_second_content);
             timeTv = (TextView) itemView.findViewById(R.id.item_home_fratured_repeat_second_time);

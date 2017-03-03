@@ -35,6 +35,8 @@ public class Constant {
     }
     // 首页 精选接口网址
     public final static String HOME_FEATURED="http://api.rr.tv/v3plus/index/collection";
+    public final static String HOME_FEATURED_VIDEO = "http://api.rr.tv/video/findM3u8ByVideoId";
+    public final static String HOME_FEATURED_VIDEO_DETAIL = "http://api.rr.tv/v3plus/video/detail";
     public final static Map<String,String>HOME_FEATURED_MAP = new HashMap<>();
     //首页 精选接口网址的key,value
     static {
@@ -47,16 +49,14 @@ public class Constant {
         HOME_FEATURED_MAP.put(key1, value1);
         HOME_FEATURED_MAP.put(key2, value2);
         HOME_FEATURED_MAP.put(key3, value3);
-
     }
+
 
 
 
     public final static Map<String,String>HOME_FEATURED_HEAD_MAP = new HashMap<>();
     //首页 精选接口网址的key,value
     static {
-
-
         String key3 = "clientVersion";
         String value3 = "3.5.2";
         HOME_FEATURED_HEAD_MAP.put(key3, value3);

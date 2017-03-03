@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lanou.yhz.article.grouparticle_b.VideoPlayerActivity">
+    tools:context="com.lanou.yhz.article.grouparticle_b.video.VideoPlayerActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_weight="5"
         android:orientation="vertical"
         android:layout_height="0dp">
-        <VideoView
+        <org.lynxz.zzplayerlibrary.widget.VideoPlayer
             android:id="@+id/video_player_videoview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -98,7 +98,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vedio_cache"/>
+                    android:text="@string/vedio_like"/>
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BriefBean;
+import com.lanou.yhz.article.grouparticle_b.home.featured.onclick.FeaturedOnClickListenter;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
 
 import java.util.List;
@@ -24,6 +25,11 @@ import java.util.Random;
 public class FeaturedTodayAdapter extends RecyclerView.Adapter<FeaturedTodayAdapter.MyViewHolder>{
     private Context context;
     private List<BriefBean>data;
+    private FeaturedOnClickListenter onClickListenter;
+
+    public void setOnClickListenter(FeaturedOnClickListenter onClickListenter) {
+        this.onClickListenter = onClickListenter;
+    }
 
     public FeaturedTodayAdapter(Context context) {
         super();
@@ -59,7 +65,6 @@ public class FeaturedTodayAdapter extends RecyclerView.Adapter<FeaturedTodayAdap
     class MyViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
         TextView timeTv,contentTv;
-
         public MyViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.item_home_fratured_today_iv);

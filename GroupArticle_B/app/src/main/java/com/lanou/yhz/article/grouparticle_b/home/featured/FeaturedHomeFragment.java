@@ -1,5 +1,6 @@
 package com.lanou.yhz.article.grouparticle_b.home.featured;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.lanou.yhz.article.grouparticle_b.R;
+import com.lanou.yhz.article.grouparticle_b.video.VideoPlayerActivity;
 import com.lanou.yhz.article.grouparticle_b.base.BaseFragment;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BannerBean;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BriefBean;
@@ -157,6 +159,12 @@ public class FeaturedHomeFragment extends BaseFragment {
         //设置精彩推荐数据
         repeatAdapter = new FeaturedAdapter(context);
         officalRecycler.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        repeatAdapter.setMyOnClickListener(new FeaturedAdapter.MyOnClickListener() {
+            @Override
+            public void onClick(int position) {
+                startActivity(new Intent(context, VideoPlayerActivity.class).putExtra("id", officalBean.get(0).getResultList().get(position).getId() + ""));
+            }
+        });
         officalRecycler.setAdapter(repeatAdapter);
 
 

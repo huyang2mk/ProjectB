@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
-import com.lanou.yhz.article.grouparticle_b.VideoPlayerActivity;
+import com.lanou.yhz.article.grouparticle_b.video.VideoPlayerActivity;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BannerBean;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
 
