@@ -14,7 +14,7 @@ import java.util.List;
 
 public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
 private List<Fragment> dataBean;
-    private String[] title = {"最新","精选","订阅"};
+    private String[] title = {"   最新","精选","订阅   "};
 
 
     public HomeFragmentPagerAdapter(FragmentManager fm, List<Fragment> dataBean) {

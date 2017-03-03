@@ -3,6 +3,7 @@ package com.lanou.yhz.article.grouparticle_b.home.subscription.nextpage.threepag
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,8 @@ import android.widget.TextView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.subscriptionbean.SubHottestAdapterBean;
-import com.lanou.yhz.article.grouparticle_b.home.subscription.nextpage.threepages.activity.ThirdPagerSubHottestActivity;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
+import com.lanou.yhz.article.grouparticle_b.videoplayer.NewsVideoActivity;
 
 import java.util.List;
 
@@ -49,10 +50,12 @@ public class ThirdPagerSubHottestFragmentAdapter extends RecyclerView.Adapter<Th
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ThirdPagerSubHottestActivity.class);
-
-                String hottest = data.get(position).getAuthor().getHeadImgUrl();
-                intent.putExtra("hottest",hottest);//不太对
+//                Intent intent = new Intent(context, ThirdPagerSubHottestActivity.class);
+//                String hottest = data.get(position).getAuthor().getHeadImgUrl();
+//                intent.putExtra("hottest",hottest);//不太对
+                Intent intent = new Intent(context,NewsVideoActivity.class);
+                Log.d("ViewPgerNewestHomeAdapt", "data.get(position).getId():" + data.get(position).getId());
+                intent.putExtra("New_videoId", data.get(position).getId());
                 context.startActivity(intent);
             }
         });

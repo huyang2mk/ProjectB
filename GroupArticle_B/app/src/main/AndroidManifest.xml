@@ -67,6 +67,7 @@
         <activity android:name=".home.subscription.nextpage.threepages.activity.ThirdPagerSubHottestActivity"></activity>
 
         <activity android:name=".VideoPlayerActivity"></activity>
+        <activity android:name=".search.SearchActivity"/>
     </application>
 
 </manifest>

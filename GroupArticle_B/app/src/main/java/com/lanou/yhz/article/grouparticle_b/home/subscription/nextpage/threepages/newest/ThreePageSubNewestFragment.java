@@ -70,6 +70,7 @@ public class ThreePageSubNewestFragment extends BaseFragment {
         mapBody.put(keyBody4,valueBody4);
 
 
+
         OkHttpManger okHttpManger = OkHttpManger.getInstance();
         okHttpManger.startPost(postUrl, mapBody,maps, new OnNetResultListener() {
             @Override
