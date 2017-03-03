@@ -7,8 +7,8 @@
 
     <com.lanou.yhz.article.grouparticle_b.home.newest.headportrait.RoundHead
         android:id="@+id/iv_subscription_avatar"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_margin="3dp"
         android:src="@mipmap/ic_launcher"
         android:scaleType="fitXY"

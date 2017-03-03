@@ -13,7 +13,7 @@ import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//频道
 public class TakeFragment extends BaseFragment {
 private TakeFragmentAdapter adapter;
     private TakeBean data;

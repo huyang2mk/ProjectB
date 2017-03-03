@@ -27,6 +27,7 @@ public class SubscriptionHomeFragment extends BaseFragment {
     private SubscriptionBean data;
     private ListSubscriptionAdapter adapter;
 
+
     @Override
     public int setLayout() {
         return R.layout.fragment_home_subscription;
@@ -41,11 +42,13 @@ public class SubscriptionHomeFragment extends BaseFragment {
     @Override
     public void initData() {
 
+
         adapter = new ListSubscriptionAdapter(context);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(context, NextSubscriptionActivity.class);
+                intent.putExtra("nextkey",data.getData().getUperList().get(position).getId());
                 startActivity(intent);
             }
         });

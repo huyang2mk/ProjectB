@@ -68,7 +68,12 @@
 
         <activity android:name=".home.subscription.nextpage.threepages.activity.ThirdPagerSubHottestActivity"></activity>
 
+<<<<<<< HEAD
         <activity android:name=".video.VideoPlayerActivity"></activity>
+=======
+        <activity android:name=".VideoPlayerActivity"></activity>
+        <activity android:name=".search.SearchActivity"/>
+>>>>>>> 8e8020a70e6a8ea25605a9b14cbc81883d93f3bc
     </application>
 
 </manifest>

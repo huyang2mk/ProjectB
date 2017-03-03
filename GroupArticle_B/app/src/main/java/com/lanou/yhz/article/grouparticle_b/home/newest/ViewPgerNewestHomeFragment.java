@@ -15,9 +15,6 @@ import com.lanou.yhz.article.grouparticle_b.ok.Constant;
 import com.lanou.yhz.article.grouparticle_b.ok.OkHttpManger;
 import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
 
-import cn.sharesdk.framework.ShareSDK;
-import cn.sharesdk.onekeyshare.OnekeyShare;
-
 /**
  * Created by dllo on 17/2/21.
  * //                            _ooOoo_
@@ -100,9 +97,6 @@ public class ViewPgerNewestHomeFragment extends BaseFragment implements SwipeRef
         Constant.NEW_MAP_BODY_VIEWPAGER.put("categoryId", id + "");
 
         Log.d("ViewPgerNewestHomeFragm", "id:" + id);
-
-
-
 
     }
 

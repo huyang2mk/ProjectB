@@ -3,6 +3,7 @@ package com.lanou.yhz.article.grouparticle_b.home.subscription.nextpage.threepag
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,8 @@ import android.widget.TextView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.subscriptionbean.SubHottestAdapterBean;
-import com.lanou.yhz.article.grouparticle_b.home.subscription.nextpage.threepages.activity.ThirdPagerSubHottestActivity;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
+import com.lanou.yhz.article.grouparticle_b.videoplayer.NewsVideoActivity;
 
 import java.util.List;
 
@@ -38,20 +39,23 @@ public class ThirdPagerSubNewestFragmentAdapter extends RecyclerView.Adapter<Thi
     public NewestViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_adapter_fragment_threepage_sub,parent,false);
        NewestViewHolder holer = new NewestViewHolder(view);
+
         return holer;
     }
 
     @Override
-    public void onBindViewHolder(final NewestViewHolder holder, int position) {
+    public void onBindViewHolder(final NewestViewHolder holder, final int position) {
         GlideManger glideManger = GlideManger.getsInstance();
         glideManger.loadImageView(context, data.get(position).getCover(), holder.imageView);
         holder.textView.setText(data.get(position).getTitle());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ThirdPagerSubHottestActivity.class);
+                Intent intent = new Intent(context,NewsVideoActivity.class);
+                Log.d("ViewPgerNewestHomeAdapt", "data.get(position).getId():" + data.get(position).getId());
+                intent.putExtra("New_videoId", data.get(position).getId());
 
-                 context.startActivity(intent);
+                context.startActivity(intent);
             }
         });
 
