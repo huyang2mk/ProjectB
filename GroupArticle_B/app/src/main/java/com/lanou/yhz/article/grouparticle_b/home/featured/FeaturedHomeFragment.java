@@ -6,7 +6,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -190,9 +189,8 @@ public class FeaturedHomeFragment extends BaseFragment {
             @Override
             public void onItemClick(int position) {
                 Intent intent = new Intent(context,VideoPlayerActivity.class);
-                intent  .putExtra("id",categoryBeen.get(0).getVideoList().get(position).getId() + "");
+                intent.putExtra("id",categoryBeen.get(0).getVideoList().get(position).getId() + "");
                 startActivity(intent);
-                Log.d("FeaturedHomeFragment", "categoryBeen.get(0).getVideoList().get(position).getId():" + categoryBeen.get(0).getVideoList().get(position).getId());
             }
         });
         resumeTouch(entertainmentView);
@@ -201,36 +199,92 @@ public class FeaturedHomeFragment extends BaseFragment {
         movieAdapter = new FeaturedMyAdapter(context);
         movieRecyclerView.addItemDecoration(new SpacesItemDecoration(itemSpacing));
         movieRecyclerView.setAdapter(movieAdapter);
+        movieAdapter.setOnClickListenter(new FeaturedOnClickListenter() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context,VideoPlayerActivity.class);
+                intent.putExtra("id",categoryBeen.get(1).getVideoList().get(position).getId() + "");
+                startActivity(intent);
+            }
+        });
         resumeTouch(movieRecyclerView);
 
         //设置生活数据
         lifeAdapter = new FeaturedMyAdapter(context);
         lifeRv.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        lifeAdapter.setOnClickListenter(new FeaturedOnClickListenter() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context,VideoPlayerActivity.class);
+                intent.putExtra("id",categoryBeen.get(2).getVideoList().get(position).getId() + "");
+                startActivity(intent);
+            }
+        });
         lifeRv.setAdapter(lifeAdapter);
 
         //设置科技数据
         scienceAdapter = new FeaturedMyAdapter(context);
         scienceRv.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        scienceAdapter.setOnClickListenter(new FeaturedOnClickListenter() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context,VideoPlayerActivity.class);
+                intent.putExtra("id",categoryBeen.get(3).getVideoList().get(position).getId() + "");
+                startActivity(intent);
+            }
+        });
         scienceRv.setAdapter(scienceAdapter);
 
         //设置音乐数据
         musicAdapter= new FeaturedMyAdapter(context);
         musicRv.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        musicAdapter.setOnClickListenter(new FeaturedOnClickListenter() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context,VideoPlayerActivity.class);
+                intent.putExtra("id",categoryBeen.get(4).getVideoList().get(position).getId() + "");
+                startActivity(intent);
+            }
+        });
         musicRv.setAdapter(musicAdapter);
 
         //设置体育数据
         sportsAdapter = new FeaturedMyAdapter(context);
         sportsRv.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        sportsAdapter.setOnClickListenter(new FeaturedOnClickListenter() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context,VideoPlayerActivity.class);
+                intent.putExtra("id",categoryBeen.get(5).getVideoList().get(position).getId() + "");
+                startActivity(intent);
+            }
+        });
         sportsRv.setAdapter(sportsAdapter);
 
         //设置教育数据
         educationAdapter = new FeaturedMyAdapter(context);
         educationRv.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        educationAdapter.setOnClickListenter(new FeaturedOnClickListenter() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context,VideoPlayerActivity.class);
+                intent.putExtra("id",categoryBeen.get(6).getVideoList().get(position).getId() + "");
+                startActivity(intent);
+            }
+        });
         educationRv.setAdapter(educationAdapter);
 
         //设置记录数据
         recordAdapter = new FeaturedMyAdapter(context);
         recordRv.addItemDecoration(new SpacesItemDecoration(itemSpacing));
+        recordAdapter.setOnClickListenter(new FeaturedOnClickListenter() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context,VideoPlayerActivity.class);
+                intent.putExtra("id",categoryBeen.get(7).getVideoList().get(position).getId() + "");
+                startActivity(intent);
+            }
+        });
         recordRv.setAdapter(recordAdapter);
 
     }
