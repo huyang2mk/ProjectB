@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,6 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.lanou.yhz.article.grouparticle_b.R;
-import com.lanou.yhz.article.grouparticle_b.video.VideoPlayerActivity;
 import com.lanou.yhz.article.grouparticle_b.base.BaseFragment;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BannerBean;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.BriefBean;
@@ -26,12 +26,14 @@ import com.lanou.yhz.article.grouparticle_b.home.featured.adapter.FeaturedMyAdap
 import com.lanou.yhz.article.grouparticle_b.home.featured.adapter.FeaturedPagerAdapter;
 import com.lanou.yhz.article.grouparticle_b.home.featured.adapter.FeaturedTodayAdapter;
 import com.lanou.yhz.article.grouparticle_b.home.featured.adapter.FeaturedUpAdapter;
+import com.lanou.yhz.article.grouparticle_b.home.featured.onclick.FeaturedOnClickListenter;
 import com.lanou.yhz.article.grouparticle_b.ok.Constant;
 import com.lanou.yhz.article.grouparticle_b.ok.OkHttpManger;
 import com.lanou.yhz.article.grouparticle_b.ok.OnNetResultListener;
 import com.lanou.yhz.article.grouparticle_b.utils.MyGridLayoutManager;
 import com.lanou.yhz.article.grouparticle_b.utils.MyScrollView;
 import com.lanou.yhz.article.grouparticle_b.utils.SpacesItemDecoration;
+import com.lanou.yhz.article.grouparticle_b.video.VideoPlayerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -184,6 +186,15 @@ public class FeaturedHomeFragment extends BaseFragment {
         entertainmentAdapter = new FeaturedMyAdapter(context);
         entertainmentView.addItemDecoration(new SpacesItemDecoration(itemSpacing));
         entertainmentView.setAdapter(entertainmentAdapter);
+        entertainmentAdapter.setOnClickListenter(new FeaturedOnClickListenter() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context,VideoPlayerActivity.class);
+                intent  .putExtra("id",categoryBeen.get(0).getVideoList().get(position).getId() + "");
+                startActivity(intent);
+                Log.d("FeaturedHomeFragment", "categoryBeen.get(0).getVideoList().get(position).getId():" + categoryBeen.get(0).getVideoList().get(position).getId());
+            }
+        });
         resumeTouch(entertainmentView);
 
         //设置影视花絮数据
@@ -347,6 +358,7 @@ public class FeaturedHomeFragment extends BaseFragment {
 
                 //设置娱乐数据
                 categoryBeen = dataBean.getCategoryList();
+
                 entertainmentAdapter.setData(categoryBeen,0);
                 entertainmentTv.setText(categoryBeen.get(0).getCategoryName());
                 MyGridLayoutManager layoutManager1 = new MyGridLayoutManager(context,2);
