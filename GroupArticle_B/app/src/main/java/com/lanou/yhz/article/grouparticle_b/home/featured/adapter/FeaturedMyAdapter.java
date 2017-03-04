@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.lanou.yhz.article.grouparticle_b.R;
 import com.lanou.yhz.article.grouparticle_b.bean.homebean.featuredbean.DataBean;
+import com.lanou.yhz.article.grouparticle_b.home.featured.onclick.FeaturedOnClickListenter;
 import com.lanou.yhz.article.grouparticle_b.ok.GlideManger;
 
 import java.util.List;
@@ -25,6 +26,7 @@ public class FeaturedMyAdapter extends RecyclerView.Adapter{
     private List<DataBean.CategoryBean> data;
     private int num;
 
+    private FeaturedOnClickListenter onClickListenter;
     public FeaturedMyAdapter(Context context) {
         this.context = context;
     }
@@ -34,6 +36,11 @@ public class FeaturedMyAdapter extends RecyclerView.Adapter{
         this.num = num;
         notifyDataSetChanged();
     }
+
+    public void setOnClickListenter(FeaturedOnClickListenter onClickListenter) {
+        this.onClickListenter = onClickListenter;
+    }
+
     public static final int FIRST = 1;
     public static final int SECOND = 2;
 
@@ -66,7 +73,7 @@ public class FeaturedMyAdapter extends RecyclerView.Adapter{
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         int viewType = getItemViewType(position);
         switch (viewType){
             case FIRST:
@@ -74,12 +81,24 @@ public class FeaturedMyAdapter extends RecyclerView.Adapter{
                 firstHolder.timeTv.setText(data.get(num).getVideoList().get(position).getDuration());
                 firstHolder.contentTv.setText(data.get(num).getVideoList().get(position).getTitle());
                 GlideManger.getsInstance().loadImageView(context,data.get(num).getVideoList().get(position).getCover(),firstHolder.imageView);
+                firstHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onClickListenter.onItemClick(position);
+                    }
+                });
                 break;
             case SECOND:
                 FeaturedMyAdapter.SecondMyViewHolder secondHolder = (SecondMyViewHolder) holder;
                 secondHolder.timeTv.setText(data.get(num).getVideoList().get(position).getDuration());
                 secondHolder.contentTv.setText(data.get(num).getVideoList().get(position).getTitle());
                 GlideManger.getsInstance().loadImageView(context,data.get(num).getVideoList().get(position).getCover(),secondHolder.imageView);
+                secondHolder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onClickListenter.onItemClick(position);
+                    }
+                });
                 break;
         }
     }

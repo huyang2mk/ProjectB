@@ -100,5 +100,5 @@
     <string name="vedio_comments">评论</string>
     <string name="vedio_cache">缓存</string>
     <string name="vedio_like">喜欢</string>
-
+    <string name="vedio_recommend">相关推荐</string>
 </resources>

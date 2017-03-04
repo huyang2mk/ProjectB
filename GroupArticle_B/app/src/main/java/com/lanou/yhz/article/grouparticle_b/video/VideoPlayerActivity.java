@@ -48,6 +48,8 @@ public class VideoPlayerActivity extends BaseActivity {
         return R.layout.activity_video_player;
     }
 
+
+
     @Override
     protected void initView() {
         videoView = (VideoPlayer) findViewById(R.id.video_player_videoview);
@@ -66,6 +68,7 @@ public class VideoPlayerActivity extends BaseActivity {
                 featuredVideoBean = gson.fromJson(successStr,FeaturedVideoBean.class);
                 String url = featuredVideoBean.getData().getM3u8().getUrl();
                 videoView.loadAndStartVideo(VideoPlayerActivity.this,url);
+                videoView.setTitle(" ");
             }
             @Override
             public void onFailureListener(String errMsg) {
@@ -141,9 +144,7 @@ public class VideoPlayerActivity extends BaseActivity {
                 Gson gson = new Gson();
                 Log.d("11111", successStr);
                 VideoDetailsBean videoDetailsBean = gson.fromJson(successStr,VideoDetailsBean.class);
-
                 videoPlayerAdapter.setData(videoDetailsBean);
-
             }
 
             @Override
